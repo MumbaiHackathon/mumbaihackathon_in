@@ -2,8 +2,16 @@ header, footer {
 	display: none;
 }
 
-.webpage-content {
-	width: 100% !important;
+.container {
+	width:100% !important;
+}
+
+.lower-container {
+	width:80% !important;
+	padding-right: 15px; 
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 .hero-name {
@@ -11,26 +19,27 @@ header, footer {
 }
 
 .hero-date {
-	font-size: 0.2em;
+	font-size: 0.3em;
 	letter-spacing: 0.1em;
 }
 
-.who-should-attend-image {
+.image {
 	width:330px;
+	margin-bottom: 50px;
 }
 
-.who-should-attend {
+.desc-title {
 	font-family: "raleway";
 	text-align: center;
-	font-size: 1.0em;
+	font-size: 2.5em;
 	font-weight: 200;
 }
 
 .large-description {
 	font-family: "raleway";
 	text-align: center;
-	font-size: 1.0em;
-	font-weight: 200;
+	font-size: 1.5em;
+	font-weight: 100;
 	margin-bottom: 100px;
 }
 
