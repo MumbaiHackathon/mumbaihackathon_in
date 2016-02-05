@@ -106,10 +106,37 @@ header, footer {
 	margin-bottom: 100px;
 }
 
-.hackathon-information li {
+.hackathon-information {
+	text-align: center;
+	font-size: 1.5em;
+	font-weight: 100;
 	margin-top: 100px;
-	margin-bottom: 30px;
-	text-align: left;
+	margin-bottom: 100px;
+}
+
+.host {
+	margin-top: 100px;
+	margin-bottom: 80px;
+}
+
+.form {
+	margin-top: 50px;
+	margin-bottom: 80px;
+}
+
+.confirm-button {
+ background-color: Transparent;
+ border: 1px solid;
+ font-size: 30px;
+ padding: 7px 12px;
+ margin: 6px 0;
+ margin-right: 12px;
+ display: inline-block;
+ min-width: 120px;
+ outline:0;
+ margin-top: 50px;
+ margin-bottom: 80px;
+
 }
 
 @media only screen and (max-width : 768px) {
