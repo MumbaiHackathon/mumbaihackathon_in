@@ -1,4 +1,27 @@
 /* Header */
+
+*{
+	font-family: "raleway" !important;
+}
+
+header, footer {
+	display: none !important;
+}
+
+.container {
+	width:100% !important;
+}
+
+.lower-container {
+	width:80% !important;
+	margin: 0 auto;
+}
+
+.hero-date {
+	font-size: 0.3em;
+	letter-spacing: 0.1em;
+}
+
 .large-header {
 	position: relative;
 	width: 100%;
@@ -18,7 +41,7 @@
 .main-title {
 	position: absolute;
 	margin: 0;
-	padding: 0;
+	padding-top: 50px;
 	color: #383a3c;
 	text-align: center;
 	top: 40%;
@@ -27,34 +50,6 @@
 	transform: translate3d(-50%,-50%,0);
 }
 
-.work-link {
-	position: absolute;
-	margin: 0;
-	padding: 0;
-	color: #f9f1e9;
-	text-align: center;
-	top: 53%;
-	left: 50%;
-	-webkit-transform: translate3d(-50%,-50%,0);
-	transform: translate3d(-50%,-50%,0);
-	text-transform: uppercase;
-	font-size: 2.2em;
-}
-
-.contact-link {
-	position: absolute;
-	margin: 0;
-	padding: 0;
-	color: #f9f1e9;
-	text-align: center;
-	top: 60%;
-	left: 50%;
-	-webkit-transform: translate3d(-50%,-50%,0);
-	transform: translate3d(-50%,-50%,0);
-	text-transform: uppercase;
-	font-size: 2.2em;
-	
-}
 
 .start-page .main-title {
 	text-transform: uppercase;
@@ -63,17 +58,58 @@
 	font-family: "raleway";
 }
 
+.ghost-button {
+ background-color: Transparent;
+ border: 1px solid;
+ font-size: 30px;
+ padding: 7px 12px;
+ margin: 6px 0;
+ margin-right: 12px;
+ display: inline-block;
+ min-width: 120px;
+ outline:0;
+}
+
+.oss-image {
+	width:240px;
+	margin-bottom: 50px;
+}
+
+.id-image {
+	width:280px;
+	margin-bottom: 50px;
+	margin-top: 80px;
+}
+
+.image {
+	width:280px;
+	margin-bottom: 50px;
+	margin-top: 80px;
+}
+
+.desc-title {
+	text-align: center;
+	font-size: 2.5em;
+	font-weight: 200;
+}
+
+.large-description {
+	text-align: center;
+	font-size: 1.5em;
+	font-weight: 100;
+	margin-bottom: 100px;
+}
+
+.hackathon-information li {
+	margin-top: 100px;
+	margin-bottom: 30px;
+	text-align: left;
+}
+
 @media only screen and (max-width : 768px) {
 	.start-page .main-title {
 		font-size: 3em;
 		top:25%;
-	}
-
-	.work-link {
-		top:60%;
-	}
-	.contact-link{
-		top:70%;
 	}
 
 }
