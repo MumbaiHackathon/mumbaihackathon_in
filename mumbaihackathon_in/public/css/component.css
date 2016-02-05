@@ -87,6 +87,12 @@ header, footer {
 	margin-top: 80px;
 }
 
+.company-logo{
+	width:100px;
+	margin-bottom: 50px;
+}
+
+
 .desc-title {
 	text-align: center;
 	font-size: 2.5em;
