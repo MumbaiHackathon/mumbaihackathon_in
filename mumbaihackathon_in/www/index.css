@@ -1,0 +1,41 @@
+header, footer {
+	display: none;
+}
+
+.webpage-content {
+	width: 100% !important;
+}
+
+.hero-name {
+	font-weight: 100;
+}
+
+.hero-date {
+	font-size: 0.2em;
+	letter-spacing: 0.1em;
+}
+
+.who-should-attend-image {
+	width:330px;
+}
+
+.who-should-attend {
+	font-family: "raleway";
+	text-align: center;
+	font-size: 1.0em;
+	font-weight: 200;
+}
+
+.large-description {
+	font-family: "raleway";
+	text-align: center;
+	font-size: 1.0em;
+	font-weight: 200;
+	margin-bottom: 100px;
+}
+
+.hackathon-information li {
+	margin-top: 100px;
+	margin-bottom: 30px;
+	text-align: left;
+}

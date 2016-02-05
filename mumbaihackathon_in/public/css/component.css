@@ -1,0 +1,79 @@
+/* Header */
+.large-header {
+	position: relative;
+	width: 100%;
+	background: #333;
+	overflow: hidden;
+	background-size: cover;
+	background-position: center center;
+	z-index: 1;
+}
+
+.start-page .large-header {
+	background-color: white;
+	background-position: center bottom;
+}
+
+
+.main-title {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	color: #383a3c;
+	text-align: center;
+	top: 40%;
+	left: 50%;
+	-webkit-transform: translate3d(-50%,-50%,0);
+	transform: translate3d(-50%,-50%,0);
+}
+
+.work-link {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	color: #f9f1e9;
+	text-align: center;
+	top: 53%;
+	left: 50%;
+	-webkit-transform: translate3d(-50%,-50%,0);
+	transform: translate3d(-50%,-50%,0);
+	text-transform: uppercase;
+	font-size: 2.2em;
+}
+
+.contact-link {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	color: #f9f1e9;
+	text-align: center;
+	top: 60%;
+	left: 50%;
+	-webkit-transform: translate3d(-50%,-50%,0);
+	transform: translate3d(-50%,-50%,0);
+	text-transform: uppercase;
+	font-size: 2.2em;
+	
+}
+
+.start-page .main-title {
+	text-transform: uppercase;
+	font-size: 7.00em;
+	letter-spacing: 0.2em;
+	font-family: "raleway";
+}
+
+@media only screen and (max-width : 768px) {
+	.start-page .main-title {
+		font-size: 3em;
+		top:25%;
+	}
+
+	.work-link {
+		top:60%;
+	}
+	.contact-link{
+		top:70%;
+	}
+
+}
