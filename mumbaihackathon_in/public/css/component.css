@@ -139,6 +139,12 @@ header, footer {
 
 }
 
+.confirm-button:hover,
+.confirm-button:active {
+	color: #fff;
+	background: black;
+}
+
 @media only screen and (max-width : 768px) {
 	.start-page .main-title {
 		font-size: 3em;

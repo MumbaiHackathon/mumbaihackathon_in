@@ -89,7 +89,7 @@
 	<div class="form">	
 	<div class="col-sm-4">	
 		<div class="input input--hoshi">
-			<input class="input__field input__field--hoshi" type="text" id="input-4" />
+			<input class="input__field input__field--hoshi" type="text" id="name" />
 			<label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-4">
 				<div class="input__label-content input__label-content--hoshi">Name</div>
 			</label>
@@ -98,7 +98,7 @@
 	
 	<div class="col-sm-4">	
 		<div class="input input--hoshi">
-			<input class="input__field input__field--hoshi" type="text" id="input-5" />
+			<input class="input__field input__field--hoshi" type="text" id="email" />
 			<label class="input__label input__label--hoshi input__label--hoshi-color-2" for="input-5">
 				<div class="input__label-content input__label-content--hoshi">Email</div>
 			</label>
@@ -107,15 +107,15 @@
 		
 	<div class="col-sm-4">
 		<div class="input input--hoshi">
-			<input class="input__field input__field--hoshi" type="text" id="input-6" />
+			<input class="input__field input__field--hoshi" type="text" id="organization" />
 			<label class="input__label input__label--hoshi input__label--hoshi-color-3" for="input-6">
-				<div class="input__label-content input__label-content--hoshi">Classification</div>
+				<div class="input__label-content input__label-content--hoshi">Organization</div>
 			</label>
 		</div>
 	</div>
 	</div>
 	<div align=center>
-		<button class="confirm-button">CONFIRM</button>
+		<button class="confirm-button" onclick="form_confirm()">CONFIRM</button>
 	</div>
 </div>
 
@@ -160,4 +160,40 @@
 			}
 		}
 	})();
+</script>
+	
+<script>
+function form_confirm() {
+	var fullname = document.getElementById("name").value;
+	var email = document.getElementById("email").value;
+	var organization = document.getElementById("organization").value;
+	
+	if (!fullname) {
+		frappe.msgprint("Name is required")
+	}
+	
+	else if (!email) {
+		frappe.msgprint("Email is required")
+	}
+	
+	else {
+		frappe.call({
+			method: "mumbaihackathon_in.api.register",
+			type: "POST",
+			args: {
+				fullname: fullname,
+				email: email,
+				organization: organization,
+			},
+			callback: function(r) {
+				if(!r.exc) {
+					frappe.msgprint(r.message);
+					document.getElementById("name").value = "";
+					document.getElementById("email").value = "";
+					document.getElementById("organization").value = "";
+				}
+			}
+		});
+	}
+}
 </script>
