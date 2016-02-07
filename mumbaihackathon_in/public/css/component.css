@@ -5,7 +5,7 @@
 }
 
 header, footer {
-	display: none !important;
+	display: none;
 }
 
 .container {
@@ -44,7 +44,7 @@ header, footer {
 	padding-top: 50px;
 	color: #383a3c;
 	text-align: center;
-	top: 40%;
+	top: 45%;
 	left: 50%;
 	-webkit-transform: translate3d(-50%,-50%,0);
 	transform: translate3d(-50%,-50%,0);
@@ -110,13 +110,12 @@ header, footer {
 	text-align: center;
 	font-size: 1.5em;
 	font-weight: 100;
-	margin-top: 100px;
-	margin-bottom: 100px;
+	padding-top: 100px;
+	padding-bottom: 150px;
 }
 
 .host {
 	margin-top: 100px;
-	margin-bottom: 80px;
 }
 
 .form {
@@ -148,7 +147,7 @@ header, footer {
 @media only screen and (max-width : 768px) {
 	.start-page .main-title {
 		font-size: 3em;
-		top:25%;
+		top:40%;
 	}
 
 }
