@@ -4,7 +4,7 @@
 	<link href='https://fonts.googleapis.com/css?family=Raleway:400,300' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="assets/mumbaihackathon_in/css/component.css" />
 	<link rel="stylesheet" type="text/css" href="assets/mumbaihackathon_in/css/form.css" />
-
+<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 </head>
 
 <div class="start-page">
@@ -17,46 +17,49 @@
 				26 &dash; 27 MARCH 2016
 			</div>
 			<div class="register-button">
-				<button class="ghost-button hero-date" onClick="document.getElementById('info').scrollIntoView();" >REGISTER</button>
+				<button class="ghost-button hero-date" >REGISTER</button>
 			</div>
 		</div>	
 	</div>
 
-	<div class="row section">
-		<div class="col-sm-12 text-center">
-			<img class="oss-image" src="/assets/mumbaihackathon_in/images/Open_Source.svg" alt="Who should attend" />
-
-			<p class= "desc-title">Open Soure. Anything goes.</p>
-
-			<p class="large-description">
-				No limits. Make what you want. Do what you want. Make sure its Open Source.<br>		
-			</p>
-		</div>
-	</div>
-
-	<div class="row section">
-		<div class="col-sm-12 text-center">
-			<img class="id-image" src="/assets/mumbaihackathon_in/images/lanyard.svg" alt="Who should attend" />
-
-			<p class= "desc-title">Who should attend</p>
-			<p class="large-description">
-				Students, Developers, Web Designers, Open Source Enthusiasts. <br>
-				Learn what others are doing, share tips and network.<br>
-			</p>
-		</div>
-	</div>
-
-	<div class="row section">
-		<div class="col-sm-12 text-center">
-			<img class="image" src="/assets/mumbaihackathon_in/images/money-bag.svg" alt="Who should attend" />
+	<div class="col-sm-12 text-center">
+			<!-- <img class="inr-image" src="/assets/mumbaihackathon_in/images/inr.svg" alt="Who should attend" /> -->
 
 			<p class= "desc-title">Code to Win</p>
 			<p class="large-description">
-				Prize pool worth INR 50,000/-<br>
-
+				Prize pool worth INR 50,000
 			</p>
 		</div>
-	</div>
+
+	
+		<div class="col-sm-12 text-center">
+			<!-- <img class="oss-image" src="/assets/mumbaihackathon_in/images/Open_Source.svg" alt="Who should attend" /> -->
+
+			<p class= "desc-title">Completely Open Soure.</p>
+
+			<p class="large-description">
+				Code what you want. Anything goes.<br>		
+			</p>
+		</div>
+	
+		<div class="col-sm-12 text-center">
+			<!-- <img class="id-image" src="/assets/mumbaihackathon_in/images/lanyard.svg" alt="Who should attend" />
+ -->
+			<p class= "desc-title">Who should attend</p>
+			<p class="large-description">
+				Students, Developers, Web Designers, Open Source Enthusiasts. <br>
+				Learn what others are doing. Share tips and network.<br>
+			</p>
+		</div>
+	
+
+		<div class="col-sm-12 text-center">
+			<!-- <img class="exclaim-image" src="/assets/mumbaihackathon_in/images/exclaim.svg" alt="Who should attend" /> -->
+
+			<p class= "desc-title">More Information coming soon!</p>
+			<p class="large-description">
+			</p>
+		</div>
 
 	<div id="info"class= "lower-container">
 		<div class="col-sm-4 hackathon-information">
@@ -161,6 +164,14 @@
 			}
 		}
 	})();
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.ghost-button').click(function(){
+		$('html, body').animate({scrollTop : $('.form').position().top},800);
+		return false;
+	});
+});
 </script>
 
 <script>

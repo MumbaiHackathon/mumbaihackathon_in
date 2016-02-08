@@ -114,15 +114,15 @@
 }
 
 .input__label--hoshi-color-1::after {
-	border-color: hsl(200, 100%, 50%);
+	border-color: hsla(0, 0%, 45%, 1);
 }
 
 .input__label--hoshi-color-2::after {
-	border-color: hsl(160, 100%, 50%);
+	border-color: hsla(0, 0%, 45%, 1);
 }
 
 .input__label--hoshi-color-3::after {
-	border-color: hsl(20, 100%, 50%);
+	border-color: hsla(0, 0%, 45%, 1);
 }
 
 .input__field--hoshi:focus + .input__label--hoshi::after,
