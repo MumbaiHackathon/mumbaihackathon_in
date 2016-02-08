@@ -1,11 +1,11 @@
 <!-- title: Mumbai Hackathon 2015 -->
 
-<head>
-	<link href='https://fonts.googleapis.com/css?family=Raleway:400,300' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" href="assets/mumbaihackathon_in/css/component.css" />
-	<link rel="stylesheet" type="text/css" href="assets/mumbaihackathon_in/css/form.css" />
-	<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-</head>
+
+<link href='https://fonts.googleapis.com/css?family=Raleway:400,300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="assets/mumbaihackathon_in/css/component.css" />
+<link rel="stylesheet" type="text/css" href="assets/mumbaihackathon_in/css/form.css" />
+
+
 
 <div class="start-page">
 	<div class="large-header" id="large-header">
@@ -50,14 +50,21 @@
 		</p>
 	</div>
 	</div>
+
 	
 <div class="row section">
 	<div class="col-sm-12 text-center">
-		<p class= "desc-title">More Information coming soon!</p>
-		<p class="large-description">
-		</p>
+		<p class= "desc-title">Rules</p>
+<div class="large-description">
+		Contribute to an open source project, or make your own.<br>
+		Your project must be uploaded to GitHub<br>
+		There will be two categories, Student and Professional.
+		</div>
+		
 	</div>
-	</div>
+</div>
+
+
 
 	<div id="info" class= "lower-container">
 		<div class="col-sm-4 hackathon-information">
@@ -72,8 +79,9 @@
 			</div>
 			<div class="col-sm-4 hackathon-information">
 				<b>Schedule:</b><br>
-				26 March 2016 &ndash; 27 March 2016<br>
-				9 A.M. to 6 P.M.<br>
+				Session 1 : 9 AM &dash; 7 PM 26th March 
+				Session 2 : 9 AM &dash; 1 PM 27th March
+				Demos : 1 PM &dash; 7 PM 27th March<br>
 			</div>
 
 			<div class= "col-sm-12 desc-title text-center">Register</div>
@@ -162,7 +170,7 @@
 	})();
 </script>
 <script type="text/javascript">
-	$(document).ready(function(){
+	frappe.ready(function(){
 		$('.ghost-button').click(function(){
 			$('html, body').animate({scrollTop : $('.form').position().top},800);
 			return false;
