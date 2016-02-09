@@ -8,6 +8,11 @@ header, footer {
 	display: none;
 }
 
+.rules{
+	font-size: 1.2em;
+	width: 85%;
+}
+
 .container {
 	width:100% !important;
 }
