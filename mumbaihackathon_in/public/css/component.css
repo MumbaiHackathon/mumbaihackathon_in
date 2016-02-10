@@ -46,7 +46,6 @@ body{
 
 .main-title {
 	position: absolute;
-	margin: 0;
 	padding-top: 50px;
 	color: #383a3c;
 	text-align: center;
@@ -130,8 +129,9 @@ body{
 
 @media only screen and (max-width : 768px) {
 	.start-page .main-title {
-		font-size: 3em;
+		font-size: 2.5em;
 		top:40%;
+		padding-left: 2%;
 	}
 
 }
