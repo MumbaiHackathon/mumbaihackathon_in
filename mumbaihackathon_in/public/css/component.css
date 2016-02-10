@@ -4,13 +4,14 @@ body{
 	font-family: "raleway" !important;
 }
 
-header, footer {
+.page-header-block, header, footer {
 	display: none;
 }
 
 .rules{
 	font-size: 1.2em;
 	width: 85%;
+	padding-bottom: 40px;
 }
 
 .container {
