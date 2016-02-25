@@ -97,6 +97,15 @@ body{
 	font-size: 2.5em;
 }
 
+.support-title {
+	text-align: center;
+	font-size: 2.0em;
+}
+
+.support {
+	margin-top: -25px;
+}
+
 .large-description {
 	text-align: center;
 	font-size: 1.5em;
