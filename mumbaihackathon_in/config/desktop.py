@@ -9,7 +9,7 @@ def get_data():
 			"color": "grey",
 			"icon": "octicon octicon-file-directory",
 			"type": "list",
-			"link": "List/Mumbai Hackathon",
+			"link": "List/Registration",
 			"label": _("Mumbai Hackathon")
 		}
 	]
