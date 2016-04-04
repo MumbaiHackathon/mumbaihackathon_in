@@ -15,7 +15,7 @@
 				26 &dash; 27 MARCH 2016
 			</div>
 			<div class="register-button">
-				<button class="ghost-button hero-date" >REGISTER</button>
+				<button class="ghost-button hero-date" onclick="window.location.href='/winners'" >Winners ></button>
 			</div>
 		</div>	
 	</div>
@@ -87,7 +87,8 @@
 		
 
 
-		<div class= "col-sm-12 desc-title text-center">Register</div>
+		<div class= "col-sm-12 desc-title text-center">Subscribe</div>
+		
 		<div class="form">	
 			<div class="col-lg-4 col-md-12 text-center">	
 				<div class="input input--hoshi">
@@ -180,14 +181,7 @@
 	}
 })();
 </script>
-<script type="text/javascript">
-	frappe.ready(function(){
-		$('.ghost-button').click(function(){
-			$('html, body').animate({scrollTop : $('.form').position().top},800);
-			return false;
-		});
-	});
-</script>
+
 
 <script>
 	function form_confirm() {

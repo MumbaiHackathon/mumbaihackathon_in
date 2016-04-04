@@ -8,7 +8,7 @@ def get_data():
 			"module_name": "Mumbai Hackathon",
 			"color": "grey",
 			"icon": "octicon octicon-file-directory",
-			"type": "List",
+			"type": "list",
 			"link": "List/Registration",
 			"label": _("Mumbai Hackathon")
 		}

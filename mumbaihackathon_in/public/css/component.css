@@ -149,6 +149,10 @@ body{
 	background: black;
 }
 
+.winner-image {
+	align: center;
+}
+
 @media only screen and (max-width : 768px) {
 	.start-page .main-title {
 		font-size: 2.5em;
