@@ -16,11 +16,18 @@ body{
 	width: 60%;
 	padding-bottom: 40px;
 	margin: 0 auto;
-	}
+}
 
 .rules h2{
 	text-align: center;
 	padding-top: 20px; 
+}
+
+.winner-main-title{
+	text-align: center;
+	font-size: 3.0em;
+	padding-top: 50px;
+	padding-bottom: 50px;
 }
 
 .container {
@@ -75,15 +82,15 @@ body{
 }
 
 .ghost-button {
- background-color: Transparent;
- border: 1px solid;
- font-size: 30px;
- padding: 7px 12px;
- margin: 6px 0;
- margin-right: 12px;
- display: inline-block;
- min-width: 120px;
- outline:0;
+	background-color: Transparent;
+	border: 1px solid;
+	font-size: 30px;
+	padding: 7px 12px;
+	margin: 6px 0;
+	margin-right: 12px;
+	display: inline-block;
+	min-width: 120px;
+	outline:0;
 }
 
 .info{
@@ -95,6 +102,21 @@ body{
 .desc-title {
 	text-align: center;
 	font-size: 2.5em;
+}
+
+.winner-title {
+	text-align: center;
+	font-size: 2.5em;
+	padding-top: 50px;
+}
+
+.winner-description {
+	text-align: center;
+	font-size: 1.5em;
+}
+
+.winner-image{
+	width: 40%;
 }
 
 .support-title {
@@ -129,17 +151,17 @@ body{
 }
 
 .confirm-button {
- background-color: Transparent;
- border: 1px solid;
- font-size: 30px;
- padding: 7px 12px;
- margin: 6px 0;
- margin-right: 12px;
- display: inline-block;
- min-width: 120px;
- outline:0;
- margin-top: 50px;
- margin-bottom: 80px;
+	background-color: Transparent;
+	border: 1px solid;
+	font-size: 30px;
+	padding: 7px 12px;
+	margin: 6px 0;
+	margin-right: 12px;
+	display: inline-block;
+	min-width: 120px;
+	outline:0;
+	margin-top: 50px;
+	margin-bottom: 80px;
 
 }
 
@@ -149,9 +171,6 @@ body{
 	background: black;
 }
 
-.winner-image {
-	align: center;
-}
 
 @media only screen and (max-width : 768px) {
 	.start-page .main-title {
