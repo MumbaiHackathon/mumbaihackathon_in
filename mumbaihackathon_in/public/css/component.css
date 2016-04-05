@@ -113,10 +113,13 @@ body{
 .winner-description {
 	text-align: center;
 	font-size: 1.5em;
+	margin-top: 15px;
+	margin-bottom: 25px;
 }
 
 .winner-image{
 	width: 40%;
+	margin-bottom: 35px;
 }
 
 .support-title {
@@ -132,6 +135,11 @@ body{
 	text-align: center;
 	font-size: 1.5em;
 	margin-bottom: 100px;
+}
+
+.small-description {
+	text-align: center;
+	font-size: 1.5em;
 }
 
 .hackathon-information {
