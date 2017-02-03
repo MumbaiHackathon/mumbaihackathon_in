@@ -1,4 +1,4 @@
-<!-- title: Mumbai Hackathon 2016 -->
+<!-- title: Mumbai Hackathon 2017 -->
 
 <link rel="stylesheet" type="text/css" href="assets/mumbaihackathon_in/css/component.css" />
 <link rel="stylesheet" type="text/css" href="assets/mumbaihackathon_in/css/form.css" />
@@ -14,10 +14,13 @@
 			<div class="hero-date">
 				A no BS Open Source Hackathon
 			</div>
-			<div>
-				<button class="ghost-button hero-date">Coming Soon ></button>
+			<div class="hero-date">
+				25th & 26th March
 			</div>
-		</div>	
+			<div class="register-button">
+				<button class="ghost-button hero-date" >REGISTER</button>
+			</div>
+			</div>	
 	</div>
 </div>
 
@@ -33,9 +36,9 @@
 	</div>
 </div>
 
-<div class= "col-sm-12 desc-title text-center">Subscribe</div>
+<div class= "col-sm-12 desc-title text-center">Register</div>
 		<p class="small-description">
-			Stay updated about our event
+			Its Free. No registrations charges!
 		</p>
 
 <div class="form">	
@@ -69,7 +72,7 @@
 
 
 <div class="col-sm-12 text-center">
-	<button class="confirm-button" onclick="form_confirm()">SUBMIT</button>
+	<button class="confirm-button" onclick="form_confirm()">Register</button>
 </div>
 
 
@@ -123,6 +126,14 @@
 })();
 </script>
 
+<script type="text/javascript">
+	frappe.ready(function(){
+		$('.ghost-button').click(function(){
+			$('html, body').animate({scrollTop : $('.form').position().top},800);
+			return false;
+		});
+	});
+</script>
 
 <script>
 	function form_confirm() {
