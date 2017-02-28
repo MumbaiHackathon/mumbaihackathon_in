@@ -93,6 +93,11 @@ body{
 	outline:0;
 }
 
+.ghost-button:hover {
+	color: #fff;
+	background-color: #000;
+}
+
 .info{
 	font-weight: 400;
 	font-size: 1.2em;
