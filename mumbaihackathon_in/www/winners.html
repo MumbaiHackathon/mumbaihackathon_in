@@ -18,21 +18,23 @@
 		<div class="col-sm-2"></div>
 		{% for winner in winners %}
 		<div class="col-sm-4">
-			<div class="card" style="height: 310px">
-				<div style="text-align: center;">
-					<img src={{winner.image_url}} alt={{winner.project_name}} style="height: 150px"/>
+			<a href={{winner.github_url}} style="text-decoration: none;">
+				<div class="card" style="height: 310px">
+					<div style="text-align: center;">
+						<img src={{winner.image_url}} alt={{winner.project_name}} style="height: 150px"/>
+					</div>
+					<div class="card-container" style="text-align: center;">
+						<h4><b>{{winner.project_name}}</b></h4>
+						<p>{% for member in winner.team_members %}
+							{{member}}
+							{% if not loop.index == loop.length %}
+							<br/>
+							{% endif %}
+							{% endfor %}
+						</p>
+					</div>
 				</div>
-				<div class="card-container" style="text-align: center;">
-					<h4><b>{{winner.project_name}}</b></h4>
-					<p>{% for member in winner.team_members %}
-						{{member}}
-						{% if not loop.index == loop.length %}
-						<br/>
-						{% endif %}
-						{% endfor %}
-					</p>
-				</div>
-			</div>
+			</a>
 		</div>
 		{% endfor %}	
 		<div class="col-sm-2"></div>
@@ -51,21 +53,23 @@
 		<div class="col-sm-3"></div>
 		{% for winner in first_runnerups %}
 		<div class="col-sm-3">
-			<div class="card" style="height: 310px">
-				<div style="text-align: center;">
-					<img src={{winner.image_url}} alt={{winner.project_name}} style="height: 120px"/>
+			<a href={{winner.github_url}} style="text-decoration: none;">
+				<div class="card" style="height: 310px">
+					<div style="text-align: center;">
+						<img src={{winner.image_url}} alt={{winner.project_name}} style="height: 120px"/>
+					</div>
+					<div class="card-container" style="text-align: center;">
+						<h4><b>{{winner.project_name}}</b></h4>
+						<p>{% for member in winner.team_members %}
+							{{member}}
+							{% if not loop.index == loop.length %}
+							<br/>
+							{% endif %}
+							{% endfor %}
+						</p>
+					</div>
 				</div>
-				<div class="card-container" style="text-align: center;">
-					<h4><b>{{winner.project_name}}</b></h4>
-					<p>{% for member in winner.team_members %}
-						{{member}}
-						{% if not loop.index == loop.length %}
-						<br/>
-						{% endif %}
-						{% endfor %}
-					</p>
-				</div>
-			</div>
+			</a>
 		</div>
 		{% endfor %}	
 		<div class="col-sm-3"></div>
@@ -83,18 +87,20 @@
 
 	<div class="flexrow" style="margin-top: 80px;">
 		{% for winner in second_runnerups %}
-		<div class="card" style="min-width: 150px; margin:5px;">
-			<div class="card-container" style="text-align: center;">
-				<h4><b>{{winner.project_name}}</b></h4>
-				<p>{% for member in winner.team_members %}
-					{{member}}
-					{% if not loop.index == loop.length %}
-					<br/>
-					{% endif %}
-					{% endfor %}
-				</p>
+		<a href={{winner.github_url}} style="text-decoration: none;">
+			<div class="card" style="min-width: 150px; margin:5px;">
+				<div class="card-container" style="text-align: center;">
+					<h4><b>{{winner.project_name}}</b></h4>
+					<p>{% for member in winner.team_members %}
+						{{member}}
+						{% if not loop.index == loop.length %}
+						<br/>
+						{% endif %}
+						{% endfor %}
+					</p>
+				</div>
 			</div>
-		</div>
+		</a>
 		{% endfor %}	
 	</div>
 </div>
