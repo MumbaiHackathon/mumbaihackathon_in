@@ -115,7 +115,7 @@ def get_context(context):
 				"Akash Garule",
 				"Aarish Iyer",
 				"Haramrit Singh",
-				"rijan Ramavat"
+				"Rijan Ramavat"
 			]
 		}]
 	
