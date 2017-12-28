@@ -1,0 +1,116 @@
+<link href='https://fonts.googleapis.com/css?family=Raleway:400,300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="/assets/mumbaihackathon_in/css/component.css" />
+<link rel="stylesheet" type="text/css" href="/assets/mumbaihackathon_in/css/mumbai_hackathon.css" />
+
+<div class="col-sm-12 text-center winner-main-title">
+	<p>Mumbai Hackathon 2017 Results</p>
+</div>
+
+<div class="row section">
+	<div class="col-sm-12 text-center">
+		<span class="prize-header">
+			<p>Winners</p>
+		</span>
+	</div>
+
+	<div class="row" style="margin-top: 80px;">
+		<div class="col-sm-2 hidden-xs"></div>
+		{% for winner in winners %}
+		<div class="col-sm-4 col-sm-offset-0 col-xs-8 col-xs-offset-2">
+			<a href={{winner.github_url}} style="text-decoration: none;">
+				<div class="card" style="height: 310px; margin-bottom: 10px;">
+					<div style="text-align: center;">
+						<img src={{winner.image_url}} alt={{winner.project_name}} style="height: 150px"/>
+					</div>
+					<div class="card-container" style="text-align: center;">
+						<h4><b>{{winner.project_name}}</b></h4>
+						<p>{% for member in winner.team_members %}
+							{{member}}
+							{% if not loop.index == loop.length %}
+							<br/>
+							{% endif %}
+							{% endfor %}
+						</p>
+					</div>
+				</div>
+			</a>
+		</div>
+		{% endfor %}
+		<div class="col-sm-2 hidden-xs"></div>
+	</div>
+</div>
+
+
+<div class="row section" style="margin-top: 50px">
+	<div class="col-sm-12 text-center">
+		<span class="prize-header">
+			<p>1st Runner-ups</p>
+		</span>
+	</div>
+
+	<div class="row" style="margin-top: 80px;">
+		<div class="col-sm-3 hidden-xs"></div>
+		{% for winner in first_runnerups %}
+		<div class="col-sm-3 col-sm-offset-0 col-xs-8 col-xs-offset-2">
+			<a href={{winner.github_url}} style="text-decoration: none;">
+				<div class="card" style="height: 310px">
+					<div style="text-align: center;">
+						<img src={{winner.image_url}} alt={{winner.project_name}} style="height: 120px"/>
+					</div>
+					<div class="card-container" style="text-align: center;">
+						<h4><b>{{winner.project_name}}</b></h4>
+						<p>{% for member in winner.team_members %}
+							{{member}}
+							{% if not loop.index == loop.length %}
+							<br/>
+							{% endif %}
+							{% endfor %}
+						</p>
+					</div>
+				</div>
+			</a>
+		</div>
+		{% endfor %}
+		<div class="col-sm-3 hidden-xs"></div>
+	</div>
+</div>
+
+
+
+<div class="row section" style="margin-top: 50px">
+	<div class="col-sm-12 text-center">
+		<span class="prize-header">
+			<p>2nd Runner-ups</p>
+		</span>
+	</div>
+
+	<div class="flexrow" style="margin-top: 80px;">
+		{% for winner in second_runnerups %}
+		<a href={{winner.github_url}} style="text-decoration: none;">
+			<div class="card" style="min-width: 150px; margin:5px;">
+				<div class="card-container" style="text-align: center;">
+					<h4><b>{{winner.project_name}}</b></h4>
+					<p>{% for member in winner.team_members %}
+						{{member}}
+						{% if not loop.index == loop.length %}
+						<br/>
+						{% endif %}
+						{% endfor %}
+					</p>
+				</div>
+			</div>
+		</a>
+		{% endfor %}
+	</div>
+</div>
+
+
+<div class="row section" style="margin-top: 80px;">
+	<div class="col-sm-12 text-center host">
+		<a href="/2016/winners" style="font-size: 2.0em;">2016 Winners</a>
+	</div>
+</div>
+
+<div class="col-sm-12 text-center">
+	<p class="winner-title"><a  style="font-size: 16px" href="https://github.com/MumbaiHackathon/">Check out other projects made at Mumbai Hackathon</a></p>
+</div>

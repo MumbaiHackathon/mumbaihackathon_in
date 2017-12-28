@@ -1,0 +1,177 @@
+<!-- title: Mumbai Hackathon 2017 -->
+
+<link rel="stylesheet" type="text/css" href="assets/mumbaihackathon_in/css/component.css" />
+<link rel="stylesheet" type="text/css" href="assets/mumbaihackathon_in/css/form.css" />
+
+
+<div class="start-page">
+	<div class="large-header" id="large-header">
+		<h1> </h1>
+		<div class="main-title">
+			Mumbai Hackathon
+			<div class="hero-date">
+				A no BS Open Source Hackathon
+			</div>
+			<div class="hero-date">
+				25th & 26th March 2017
+			</div>
+			<div class="hero-date" style="margin: 40px 0px 0px 0px">
+				<span style="font-size: 1.5em">₹ 50,000</span><br>Cash Prize
+			</div>
+			<div class="register-button" style="margin: 0px 0px 0px 10px">
+				<a class="ghost-button hero-date" href="/winners" style="text-decoration: none;">WINNERS</a>
+			</div>
+		</div>	
+	</div>
+</div>
+
+<div class="row section">
+	<div class="col-sm-12 text-center host">
+		<p class= "desc-title">About</p>
+		<p class="large-description">
+			Mumbai Hackathon is hosted anually by ERPNext and Don Bosco Institute of Technology<br>
+			The intention of hosting Mumbai Hackathon is to promote open source software development <br>
+			On 25th March 2017, more than 40 teams participated and 25+ Open Source applications were developed within 30 Hours<br><br>
+			<a href="https://github.com/MumbaiHackathon/">Check out projects made at Mumbai Hackathon here</a>
+		</p>
+	</div>
+</div>
+
+<!--<div class= "col-sm-12 desc-title text-center">Register</div>
+<div class="form">	
+	<div class="col-lg-4 col-md-12 text-center">	
+		<div class="input input--hoshi">
+			<input class="input__field input__field--hoshi" type="text" id="name" />
+			<label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-4">
+				<div class="input__label-content input__label-content--hoshi">Name</div>
+			</label>
+		</div>
+	</div>
+
+	<div class="col-lg-4 col-md-12 text-center">	
+		<div class="input input--hoshi">
+			<input class="input__field input__field--hoshi" type="text" id="email" />
+			<label class="input__label input__label--hoshi input__label--hoshi-color-2" for="input-5">
+				<div class="input__label-content input__label-content--hoshi">Email</div>
+			</label>
+		</div>
+	</div>
+
+	<div class="col-lg-4 col-md-12 text-center">
+		<div class="input input--hoshi">
+			<input class="input__field input__field--hoshi" type="text" id="organization" />
+			<label class="input__label input__label--hoshi input__label--hoshi-color-3" for="input-6">
+				<div class="input__label-content input__label-content--hoshi">Organization</div>
+			</label>
+		</div>
+	</div>-->
+</div>
+
+
+<!--<div class="col-sm-12 text-center">
+	<button class="confirm-button" onclick="form_confirm()">Submit</button>
+</div>-->
+
+
+<!--<div class="col-sm-12 text-center lead">
+	<a href="/rules">Rules and Schedule</a>
+</div>-->
+
+
+<div class="row section">
+	<div class="col-sm-12 text-center host">
+		<p class= "desc-title">Event hosted by</p>
+		<p class="large-description">
+			<a href="https://erpnext.com/">ERPNext Open Source Software Foundation</a> & <a href="http://www.dbit.in/">Don Bosco Institute of Technology</a>
+		</p>
+	</div>
+</div>
+
+<script src="assets/mumbaihackathon_in/js/TweenLite.min.js"></script>
+<script src="assets/mumbaihackathon_in/js/EasePack.min.js"></script>
+<script src="assets/mumbaihackathon_in/js/rAF.js"></script>
+<script src="assets/mumbaihackathon_in/js/animate.js"></script>
+<script src="assets/mumbaihackathon_in/js/classie.js"></script>
+
+<script>
+	(function() {
+	// trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+	if (!String.prototype.trim) {
+		(function() {
+			// Make sure we trim BOM and NBSP
+			var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+			String.prototype.trim = function() {
+				return this.replace(rtrim, '');
+			};
+		})();
+	}
+
+	[].slice.call( document.querySelectorAll( 'input.input__field' ) ).forEach( function( inputEl ) {
+		// in case the input is already filled..
+		if( inputEl.value.trim() !== '' ) {
+			classie.add( inputEl.parentNode, 'input--filled' );
+		}
+
+		// events:
+		inputEl.addEventListener( 'focus', onInputFocus );
+		inputEl.addEventListener( 'blur', onInputBlur );
+	} );
+
+	function onInputFocus( ev ) {
+		classie.add( ev.target.parentNode, 'input--filled' );
+	}
+
+	function onInputBlur( ev ) {
+		if( ev.target.value.trim() === '' ) {
+			classie.remove( ev.target.parentNode, 'input--filled' );
+		}
+	}
+})();
+</script>
+
+<script type="text/javascript">
+	frappe.ready(function(){
+		$('.ghost-button').click(function(){
+			$('html, body').animate({scrollTop : $('.form').position().top},800);
+			return false;
+		});
+	});
+</script>
+
+<script>
+	function form_confirm() {
+		var fullname = document.getElementById("name").value;
+		var email = document.getElementById("email").value;
+		var organization = document.getElementById("organization").value;
+
+		if (!fullname) {
+			frappe.msgprint("Name is required")
+			document.getElementById("name").focus();
+		}
+
+		else if (!email) {
+			frappe.msgprint("Email is required")
+			document.getElementById("email").focus();
+		}
+
+		else {
+			frappe.call({
+				method: "mumbaihackathon_in.api.register",
+				type: "POST",
+				args: {
+					fullname: fullname,
+					email: email,
+					organization: organization,
+				},
+				callback: function(r) {
+					if(!r.exc) {
+						frappe.msgprint(r.message);
+						document.getElementById("name").value = "";
+						document.getElementById("email").value = "";
+						document.getElementById("organization").value = "";
+					}
+				}
+			});
+		}
+	}
+</script>
