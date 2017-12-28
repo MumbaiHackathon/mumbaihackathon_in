@@ -151,7 +151,7 @@ body {
     font: normal 1em / 2 'Rubik', sans-serif;
     color: #a6a6a6;
     /*gradient gives problem in firefox*/
-    background: radial-gradient(circle closest-side, #15191e, #060809);
+    background: radial-gradient(circle closest-side, #15191e00, #060809);
     -webkit-text-size-adjust: 100%;
     -webkit-font-feature-settings: "kern" 1;
     -moz-font-feature-settings: "kern" 1;
@@ -165,7 +165,8 @@ body {
 
 .home{
     text-align: center;
-    margin: 30% auto;
+    margin: 10% auto;
+    max-width: 350px;
 }
 
 .about, .rules{
@@ -235,7 +236,6 @@ body {
 #prize{
     font-size: 1.25em;
     color: #ccc;
-    padding-top: 0.5em;
 }
 
 h2 {
@@ -265,6 +265,8 @@ p {
 
 .left{
      margin:0 auto;
+     width: 80%;
+     padding-bottom: 2em;
 }
 .right {
     width: 80%;
@@ -327,7 +329,7 @@ max-width:150px;
 
 @media screen and (min-width: 1024px){
 .home{
-    margin: 10% auto;
+    margin: 7% auto;
 }
 .about{
      margin: 25% auto 15%;
@@ -357,3 +359,51 @@ max-width:150px;
        background-color: #8c8c8c;
        color: #ccc;
 }
+
+
+/*form*/
+
+input {
+    background-color: transparent;
+    border-bottom: solid #34373c 2px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    line-height: 2em;
+    padding: .5em;
+    color: #fff;
+    float: right;
+    width: 200px;
+}
+
+form div {
+    padding: 1em;
+    text-align: left;
+}
+
+form {
+  width: 100%;
+  margin: 0 auto;
+}
+
+button{
+    background-color: #b4b4b4;
+    border:none;
+    padding:1em;
+    color: #000;
+    border-radius: 5px;
+    cursor:pointer;
+    margin-top: 2em;
+    margin-right: 2em;
+}
+
+button:hover{
+    background-color:#fff;
+
+}
+
+/* form error
+input:invalid{
+    border-bottom: solid #e65a5a 2px;
+}
+*/
