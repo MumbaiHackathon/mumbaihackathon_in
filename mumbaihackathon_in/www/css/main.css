@@ -2,7 +2,7 @@
 html5doctor.com Reset Stylesheet
 v1.6.1
 Last Updated: 2010-09-17
-Author: Richard Clark - http://richclarkdesign.com 
+Author: Richard Clark - http://richclarkdesign.com
 Twitter: @rich_clark
 */
 
@@ -15,7 +15,7 @@ b, i,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure, 
+article, aside, canvas, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section, summary,
 time, mark, audio, video {
     margin:0;
@@ -33,7 +33,7 @@ body {
 
 
 article,aside,details,figcaption,figure,
-footer,header,hgroup,menu,nav,section { 
+footer,header,hgroup,menu,nav,section {
     display:block;
 }
 
@@ -69,7 +69,7 @@ ins {
 /* change colours to suit your needs */
 mark {
     background-color:#ff9;
-    color:#000; 
+    color:#000;
     font-style:italic;
     font-weight:bold;
 }
@@ -92,7 +92,7 @@ table {
 hr {
     display:block;
     height:1px;
-    border:0;   
+    border:0;
     border-top:1px solid #cccccc;
     margin:1em 0;
     padding:0;
@@ -178,6 +178,7 @@ body {
 
 .about{
      margin: 60% auto 15%;
+	 padding: 0px 30px;
 }
 
 .rules{
@@ -254,7 +255,7 @@ h3{
 p {
     margin-top: 0;
     margin-bottom: 1em;
-   
+
 }
 
 
@@ -349,7 +350,7 @@ max-width:150px;
 }
 
 /*media querry*/
- 
+
 ::-moz-selection {
        background-color: #8c8c8c;
        color: #ccc;
@@ -363,17 +364,43 @@ max-width:150px;
 
 /*form*/
 
+label {
+	line-height: 2em;
+	padding: .2em;
+	display: inline-block;
+}
+
 input {
     background-color: transparent;
-    border-bottom: solid #34373c 2px;
+    border-bottom: 2px solid #34373c;
     border-left: none;
     border-right: none;
     border-top: none;
     line-height: 2em;
-    padding: .5em;
-    color: #fff;
+    padding: .2em .5em;
+    color: #d8d8d8;
     float: right;
-    width: 200px;
+    width: 300px;
+	font-size: inherit;
+}
+
+input:focus {
+	outline: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+.application-form {
+	margin-top: 60px;
+}
+
+.message {
+	margin-top: 1em;
 }
 
 form div {
@@ -386,20 +413,24 @@ form {
   margin: 0 auto;
 }
 
-button{
-    background-color: #b4b4b4;
-    border:none;
+button {
+    border: 3px solid #b4b4b4;
+    background-color: transparent;
     padding:1em;
-    color: #000;
+    color: #b4b4b4;
     border-radius: 5px;
     cursor:pointer;
-    margin-top: 2em;
-    margin-right: 2em;
+	font-size: inherit;
 }
 
 button:hover{
-    background-color:#fff;
+    background-color:#b4b4b4;
+    color: #fff;
+}
 
+button.register {
+    margin-top: 2em;
+    float: right;
 }
 
 /* form error
