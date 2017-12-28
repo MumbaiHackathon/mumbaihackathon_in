@@ -29,21 +29,22 @@
             <h2 id="logo-text"><span class="devanagari">मुंबई</span> Hackathon</h2>
             <p>ERPNext Foundation & Don Bosco Institute Of Technology are back with their annual Open Source Hackathon.</p>
             <p id="prize">₹ 50,000 Cash Prize</p>
-            <form class="application-form" action="javascript:form_confirm()">
+            <form class="application-form" autocomplete="off"
+				action="javascript:form_confirm()">
             <fieldset>
             <div>
             <label for="applicant-name">Name</label>
-            <input type='text' id="applicant-name" required name='name'>
+            <input  autocomplete="off" type='text' id="applicant-name" required name='name'>
 
             </div>
             <div>
             <label for="applicant-email">Email</label>
-            <input type='email' id="applicant-email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required name='email'>
+            <input  autocomplete="off" type='email' id="applicant-email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required name='email'>
 
             </div>
             <div>
              <label for="applicant-org">Institute</label>
-            <input type='text' id="applicant-org"  required name='organization'>
+            <input  autocomplete="off" type='text' id="applicant-org"  required name='organization'>
 
             </div>
             <div>

@@ -388,12 +388,12 @@ input:focus {
 	outline: none;
 }
 
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active {
-    transition: background-color 5000s ease-in-out 0s;
+input:-webkit-autofill, input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px #15191e inset;
+  -webkit-text-fill-color: #d8d8d8;
 }
+
+
 
 .application-form {
 	margin-top: 60px;
@@ -432,6 +432,7 @@ button.register {
     margin-top: 2em;
     float: right;
 }
+
 
 /* form error
 input:invalid{
