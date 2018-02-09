@@ -280,7 +280,7 @@ max-width:150px;
 
 }
 
-#about-links {
+.about-links {
     display: flex;
     padding-top: 2em;
     flex-direction: column;
@@ -320,11 +320,15 @@ max-width:150px;
     color: #fff;
 }
 
-#about-links a {
+.lists {
     margin-right: 3.5em;
-    margin-bottom: 1em;
     }
-
+.lists li {
+    list-style:none;
+}
+.lists a{
+    margin-bottom: 1em;
+}
 
 /*media querry*/
 
@@ -335,7 +339,7 @@ max-width:150px;
 .about{
      margin: 25% auto 15%;
 }
-#about-links, .about, .rules{
+.about-links, .about, .rules{
     flex-direction: row;
 }
 
