@@ -285,7 +285,6 @@ max-width:150px;
     padding-top: 2em;
     flex-direction: column;
 }
-
 .events {
     color: #ccc;
 }
@@ -323,6 +322,7 @@ max-width:150px;
 
 #about-links a {
     margin-right: 3.5em;
+    margin-bottom: 1em;
     }
 
 
