@@ -272,7 +272,7 @@ p {
 }
 
 .top-spacer {
-	margin-top: 2em;
+	margin-top: 4em;
 }
 
 .list {
@@ -309,12 +309,10 @@ p {
 	padding-bottom: 1em;
 }
 
-.winner-list {
-	display: flex;
-	list-style: none;
-	color: #999;
-	padding-bottom: 4em;
-	padding-top: 1em;
+.winners:not(:last-child) {
+    border-bottom: 1px solid #444;
+    margin-bottom: 2em;
+    padding-bottom: 2em;
 }
 
 .project-img {
@@ -322,18 +320,24 @@ p {
 	border-radius: 0.5em;
 }
 
-.winner-list li {
-	padding-right: 4em;
-	max-width: 200px;
+.winner-container {
+	display: flex;
+	flex-direction: column;
 }
 
-.winner-list a {
-	color: #b3b3b3;
-	text-decoration: none;
+.winner-container:not(:last-child) {
+        margin-bottom: 2em;
 }
 
-.winner-list a:hover {
-	color: #fff;
+.winner-img {
+	margin-right: 4em;
+	width: 250px;
+  flex-shrink: 0;
+}
+
+.team-members {
+	padding-left: 1em;
+	padding-bottom: 1em;
 }
 
 .lists {
@@ -359,7 +363,7 @@ p {
 		margin: 25% auto 15%;
 	}
 
-	.about-links, .about, .rules {
+	.about-links, .about, .rules, .winner-container {
 		flex-direction: row;
 	}
 

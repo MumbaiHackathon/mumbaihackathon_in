@@ -68,69 +68,66 @@
 				{% for winner in winners %}
 				<div class="winner-container">
 					<div class="winner-img">
-						<a href="{{ winner.project_url }}" target="_blank">
-							<img class="project-img" src="{{ winner.project_img }}" alt=" {{ winner.project_name }}">
+						<a href="{{ winner.github_url }}" target="_blank">
+							<img class="project-img" src="{{ winner.image_url }}" alt=" {{ winner.project_name }}">
 						</a>
 					</div>
 					<div class="team-info">
-						<h3>{{ winner.project_name }}</h3>
 						{% if winner.project_descp %}
 						<p class="project-descp">{{ winner.project_descp }}</p>
 						{% endif %}
 						<ul class="team-members">
-							{% for member in winner.team_member %}
+							{% for member in winner.team_members %}
 							<li class="list-unstyled">{{ member}}</li>
 							{% endfor %}
 						</ul>
-						<a class="primary-link" href="{{ winner.project_url }}" target="_blank">Github Repository</a>
+						<a class="secondary-links" href="{{ winner.github_url }}" target="_blank">github<img class="link-arrow" src="../img/arrow.svg"></a>
 					</div>
 				</div>
 				{% endfor %}
 			</div>
 			<div class="winners">
-				<h2>1st Runner-Up</h2>
-				{% for winner in first_runnerup %}
+				<h2>1st Runners-Up</h2>
+				{% for winner in first_runnerups %}
 				<div class="winner-container">
 					<div class="winner-img">
-						<a href="{{ winner.project_url }}" target="_blank">
-							<img class="project-img" src="{{ winner.project_img }}" alt=" {{ winner.project_name }}">
+						<a href="{{ winner.github_url }}" target="_blank">
+							<img class="project-img" src="{{ winner.image_url }}" alt=" {{ winner.project_name }}">
 						</a>
 					</div>
 					<div class="team-info">
-						<h3>{{ winner.project_name }}</h3>
 						{% if winner.project_descp %}
 						<p class="project-descp">{{ winner.project_descp }}</p>
 						{% endif %}
 						<ul class="team-members">
-							{% for member in winner.team_member %}
+							{% for member in winner.team_members %}
 							<li class="list-unstyled">{{ member}}</li>
 							{% endfor %}
 						</ul>
-						<a class="primary-link" href="{{ winner.project_url }}" target="_blank">Github Repository</a>
+						<a class="secondary-links" href="{{ winner.github_url }}" target="_blank">github<img class="link-arrow" src="../img/arrow.svg"></a>
 					</div>
 				</div>
 				{% endfor %}
 			</div>
 			<div class="winners">
-				<h2>2nd Runner-Ups</h2>
-				{% for winner in second_runnerup %}
+				<h2>2nd Runners-Up</h2>
+				{% for winner in second_runnerups %}
 				<div class="winner-container">
 					<div class="winner-img">
-						<a href="{{ winner.project_url }}" target="_blank">
-							<img class="project-img" src="{{ winner.project_img }}" alt=" {{ winner.project_name }}">
+						<a href="{{ winner.github_url }}" target="_blank">
+							<img class="project-img" src="{{ winner.image_url }}" alt=" {{ winner.project_name }}">
 						</a>
 					</div>
 					<div class="team-info">
-						<h3>{{ winner.project_name }}</h3>
 						{% if winner.project_descp %}
 						<p class="project-descp">{{ winner.project_descp }}</p>
 						{% endif %}
 						<ul class="team-members">
-							{% for member in winner.team_member %}
+							{% for member in winner.team_members %}
 							<li class="list-unstyled">{{ member}}</li>
 							{% endfor %}
 						</ul>
-						<a class="primary-link" href="{{ winner.project_url }}" target="_blank">Github Repository</a>
+						<a class="secondary-links" href="{{ winner.github_url }}" target="_blank">github<img class="link-arrow" src="../img/arrow.svg"></a>
 					</div>
 				</div>
 				{% endfor %}
