@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- by design team  @ frappe -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>Winners - Mumbai Hackathon 2018</title>
+	<meta name="description" content="Winners of Mumbai Hackathon 2018 held on 10th and 11th March 2018."/>
+	<meta name="keywords" content="mumbai hackathon winners, hackathon in mumbai winners, opensource hackathon winners, open-source hackathon winners, open source hackathon winners, hackathon 2018 winners, india hackathon winners, india hackathon 2018 winners"/>
+	<!-- Meta tags for SEO and Social Media -->
+	<html itemscope itemtype="http://schema.org/Webpage">
+	<!-- Schema.org markup for Google+ -->
+	<meta itemprop="name" content="Winners - Mumbai Hackathon, 2018">
+	<meta itemprop="description" content="Winners of Mumbai Hackathon 2018.">
+	<meta itemprop="image" content="https://mumbaihackathon.in/hackathon-g+.png">
+	<!-- Twitter Card data -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@mumbaihackathon">
+	<meta name="twitter:title" content="Winners - Mumbai Hackathon, 2018">
+	<meta name="twitter:description" content="Winners for Mumbai Hackathon 2018.">
+	<meta name="twitter:creator" content="@mumbaihackathon">
+	<!-- Twitter summary card with large image must be at least 280x150px -->
+	<meta name="twitter:image:src" content="https://mumbaihackathon.in/hackathon-twitter.png">
+	<!-- Open Graph data -->
+	<meta property="og:title" content="Winners - Mumbai Hackathon, 2018" />
+	<meta property="og:type" content="website"/>
+	<meta property="og:url" content="https://mumbaihackathon.in/winners" />
+	<meta property="og:image" content="https://mumbaihackathon.in/hackathon-fb.png" />
+	<meta property="og:description" content="REGISTRATIONS OPEN! Mumbai Hackathon is an annual Open Source Hackathon organized by the ERPNext Foundation and Don Bosco Institute of Technology, Mumbai." />
+	<meta property="og:site_name" content="Mumbai Hackathon"/>
+	<!-- End of Meta Tags-->
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="canonical" href="" />
+	<!-- favicons-->
+	<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/manifest.json">
+	<meta name="msapplication-TileColor" content="#000">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#000">
+	<link rel="shortcut icon" href="img/favicon.ico">
+	<!-- End -->
+	<link rel="stylesheet" href="../css/main.css">
+	<link rel="canonical" href="" />
+	<link rel="shortcut icon" href="img/favicon.ico">
+</head>
+<body>
+	<section class="rules">
+		<div class="left">
+			<a class="secondary-links" href="../index.html"><img class="back-arrow" src="../img/arrow.svg">Back</a>
+		</div>
+		<div class="right">
+			<h1 class="text-white">Mumbai Hackathon 2018 Results</h1>
+			<div class="winners top-spacer">
+				<h2>Winners</h2>
+				{% for winner in winners %}
+				<div class="winner-container">
+					<div class="winner-img">
+						<a href="{{ winner.project_url }}" target="_blank">
+							<img class="project-img" src="{{ winner.project_img }}" alt=" {{ winner.project_name }}">
+						</a>
+					</div>
+					<div class="team-info">
+						<h3>{{ winner.project_name }}</h3>
+						{% if winner.project_descp %}
+						<p class="project-descp">{{ winner.project_descp }}</p>
+						{% endif %}
+						<ul class="team-members">
+							{% for member in winner.team_member %}
+							<li class="list-unstyled">{{ member}}</li>
+							{% endfor %}
+						</ul>
+						<a class="primary-link" href="{{ winner.project_url }}" target="_blank">Github Repository</a>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+			<div class="winners">
+				<h2>1st Runner-Up</h2>
+				{% for winner in first_runnerup %}
+				<div class="winner-container">
+					<div class="winner-img">
+						<a href="{{ winner.project_url }}" target="_blank">
+							<img class="project-img" src="{{ winner.project_img }}" alt=" {{ winner.project_name }}">
+						</a>
+					</div>
+					<div class="team-info">
+						<h3>{{ winner.project_name }}</h3>
+						{% if winner.project_descp %}
+						<p class="project-descp">{{ winner.project_descp }}</p>
+						{% endif %}
+						<ul class="team-members">
+							{% for member in winner.team_member %}
+							<li class="list-unstyled">{{ member}}</li>
+							{% endfor %}
+						</ul>
+						<a class="primary-link" href="{{ winner.project_url }}" target="_blank">Github Repository</a>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+			<div class="winners">
+				<h2>2nd Runner-Ups</h2>
+				{% for winner in second_runnerup %}
+				<div class="winner-container">
+					<div class="winner-img">
+						<a href="{{ winner.project_url }}" target="_blank">
+							<img class="project-img" src="{{ winner.project_img }}" alt=" {{ winner.project_name }}">
+						</a>
+					</div>
+					<div class="team-info">
+						<h3>{{ winner.project_name }}</h3>
+						{% if winner.project_descp %}
+						<p class="project-descp">{{ winner.project_descp }}</p>
+						{% endif %}
+						<ul class="team-members">
+							{% for member in winner.team_member %}
+							<li class="list-unstyled">{{ member}}</li>
+							{% endfor %}
+						</ul>
+						<a class="primary-link" href="{{ winner.project_url }}" target="_blank">Github Repository</a>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</section>  
+</body>
+</html>
