@@ -21,7 +21,7 @@ def get_context(context):
 			"Arpita Karkera",
 			"Priya Nayak",
 			"Sunaina Punyani",
-			"Piyusha Sawant"
+			"Piyusha Sawant",
 			"Deep Kawa"
 		]
 	}]
