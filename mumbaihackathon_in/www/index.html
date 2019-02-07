@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <!-- by raghukamath -->
-    <!-- Designer @ frappe -->
-    <!-- License: MIT -->
+    <!--
+  ,-                                                                                  -.
+ _|     |\/|       ._ _   |_    _.  o    |_|   _.   _  |    _.  _|_  |_    _   ._      |_
+  |     |  |  |_|  | | |  |_)  (_|  |    | |  (_|  (_  |<  (_|   |_  | |  (_)  | |     |
+  `-                                                                                  -'
+
+    -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalabel=no">
-    <title>Mumbai Hackathon 2018 - An Opensource Hackathon</title>
-    <meta name="description" content="Date: 10th and 11th March 2018. Place: Don Bosco Insitute of Technology, Kurla West. Mumbai Hackathon is an annual Open Source hackathon organized by the ERPNext Foundation & Don Bosco Institue of Technology, Mumbai."/>
-    <meta name="keywords" content="mumbai hackathon, hackathon in mumbai, opensource hackathon, open-source hackathon, open source hackathon, hackathon 2018, india hackathon, india hackathon 2018"/>
+    <title>Mumbai Hackathon 2019 - An Opensource Hackathon</title>
+    <meta name="description" content="Date: 15th and 16th March 2019. Place: Don Bosco Insitute of Technology, Kurla West. Mumbai Hackathon is an annual Open Source hackathon organized by the ERPNext Foundation & Don Bosco Institue of Technology, Mumbai." />
+    <meta name="keywords" content="mumbai hackathon, hackathon in mumbai, opensource hackathon, open-source hackathon, open source hackathon, hackathon 2019, india hackathon, india hackathon 2019" />
 
     <!-- Meta tags for SEO and Social Media -->
     <html itemscope itemtype="http://schema.org/Webpage">
 
     <!-- Schema.org markup for Google+ -->
-    <meta itemprop="name" content="Mumbai Hackathon - 2018">
-    <meta itemprop="description" content="Mumbai Hackathon is an Open Source Hackathon organized by the ERPNext Foundation and DBIT, Mumbai.">
+    <meta itemprop="name" content="Mumbai Hackathon - 2019">
+    <meta itemprop="description" content="Mumbai Hackathon is an Open Source Hackathon organized by the Frappe and DBIT, Mumbai.">
     <meta itemprop="image" content="https://mumbaihackathon.in/hackathon-g+.png">
 
     <!-- Twitter Card data -->
@@ -30,11 +35,11 @@
 
     <!-- Open Graph data -->
     <meta property="og:title" content="Mumbai Hackathon" />
-    <meta property="og:type" content="website"/>
+    <meta property="og:type" content="website" />
     <meta property="og:url" content="https://mumbaihackathon.in" />
     <meta property="og:image" content="https://mumbaihackathon.in/hackathon-fb.png" />
     <meta property="og:description" content="Mumbai Hackathon is an annual Open Source Hackathon organized by the ERPNext Foundation and Don Bosco Institute of Technology, Mumbai." />
-    <meta property="og:site_name" content="Mumbai Hackathon - 2018"/>
+    <meta property="og:site_name" content="Mumbai Hackathon - 2018" />
 
     <!-- End of Meta Tags-->
 
@@ -51,7 +56,7 @@
     <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -60,70 +65,55 @@
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#000">
     <link rel="shortcut icon" href="img/favicon.ico">
+
+    <!-- fonts & icons -->
+    <link href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet">
     <!-- End -->
-    
-	<script>
-		window.frappe = {};
-		frappe.ready_events = [];
-		frappe.ready = function(fn) {
-			frappe.ready_events.push(fn);
-		}
-		window.dev_server = 1;
+
+    <script>
+        window.frappe = {};
+        frappe.ready_events = [];
+        frappe.ready = function (fn) {
+            frappe.ready_events.push(fn);
+        }
+        window.dev_server = 1;
     </script>
 </head>
+
 <body>
     <div class="wrapper">
-        <section class="home">
-            <img src="img/logo.svg" alt="Mumbai Hackathon">
-            <h2 id="logo-text"><span class="devanagari">मुंबई</span> Hackathon</h2>
-            <p>ERPNext Foundation & Don Bosco Institute Of Technology are back with their annual Open Source Hackathon.</p>
-            <p id="prize">₹ 50,000 Cash Prize</p>
-	    <!--	
-            <form class="application-form" autocomplete="off"
-				action="javascript:form_confirm()">
-            <fieldset>
-            <div>
-            <label for="applicant-name">Name</label>
-            <input  autocomplete="off" type='text' id="applicant-name" required name='name'>
-
+        <section class="about">
+            <div class="left">
+                <h1 id="logo-text"><span class="accent">मुंबई</span> Hackathon</h1>
             </div>
-            <div>
-            <label for="applicant-email">Email</label>
-            <input  autocomplete="off" type='email' id="applicant-email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required name='email'>
-
+            <div class="right">
+                <div class="nav-list">
+                    <span class="nav-item"><a class="secondary-links" href="/rules">Rules</a></span>
+                    <span class="nav-item">About</span>
+                    <span class="nav-item"><a class="secondary-links" href="mailto:mumbaihackathon@erpnext.org">Write
+                            to Us</a></span>
+                </div>
             </div>
-            <div>
-             <label for="applicant-org">Institute</label>
-            <input  autocomplete="off" type='text' id="applicant-org"  required name='organization'>
-
-            </div>
-            <div>
-             <label></label>
-            <button class="register" type="submit">
-				Register</button>
-
-            </div>
-            </fieldset>
-
-            </form> -->
-		
-	     <!--<h2 id="logo-text"> Registrations Closed </h2> --> 	
-			<p class="message">On 10th March 2017, 47 teams participated and developed Open Source Applications in less than 28 hours.</p>
-		<p> <a class="secondary-links" href="/2018/winners">Click here for the list of Winners</a> </p>
         </section>
+        <section class="home">
+            <!-- <img src="img/logo.svg" alt="Mumbai Hackathon"> -->
+            <h4 style="font-size: 20px; line-height: 1.5;">
+                Every year, ERPNext Foundation & Don Bosco Institute of Technology welcomes students,
+                developers and designers from across the country to create incredible open source projects at Mumbai's
+                largest Open Source Hackathon.
+            </h4>
+            <!-- <ul>
+                <li id="prize">₹ 100,000 Cash Prize</li>
+                <li id="dates">15th & 16th March 2019</li>
+            </ul> -->
+        </section>
+        <section id="terminal" class="about"></section>
         <section id="about-anchor" class="about">
             <div class="left">
                 <img class="inner-logo" src="img/logo.svg" alt="Mumbai hackathon">
             </div>
             <div class="right">
-                <ul class="list details">
-                    <li>10 & 11 March 2018</li>
-                    <li><a class="tertiary-links" href="https://www.google.com/maps/place/Don+Bosco+Institute+Of+Technology/@19.0824344,72.8877163,17z/data=!4m5!3m4!1s0x3be7c8866a456c9f:0x8d1745d15baac575!8m2!3d19.0812532!4d72.8885961?hl=en" target="_blank">Don Bosco Institute Of Technology, Kurla West.</a></li>
-                    <li>Limited seats</li>
-                </ul>
-                <p>Mumbai Hackathon is hosted annually by ERPNext and Don Bosco Institute of Technology. The aim of hosting the hackathon is to promote open source software development.</p>
-                <p>The event provides a platform for young college students and professionals to showcase their talent and be a part of the larger Open Source development community of which, ERPNext is proudly a part of.</p>
-                <p>On 25th March 2017, more than 40 teams participated and 25+ Open Source applications were developed within 30 Hours. <a class="tertiary-links" href="https://github.com/MumbaiHackathon/">Here</a> is the list of all projects submitted under Mumbai Hackathon.</p>
+
                 <div class="about-links">
                     <ul class="lists">
                         <li>
@@ -135,29 +125,30 @@
                     </ul>
                     <ul class="lists">
                         <li>
-                            <a class="secondary-links" href="https://twitter.com/mumbaihackathon">Twitter<img class="link-arrow" src="img/arrow.svg"></a>
+                            <a class="secondary-links" href="https://twitter.com/mumbaihackathon">Twitter<img class="link-arrow"
+                                    src="img/arrow.svg"></a>
                         </li>
                         <li>
-                            <a class="secondary-links" href="https://www.facebook.com/mumbaihackathon">Facebook<img class="link-arrow" src="img/arrow.svg"></a>
+                            <a class="secondary-links" href="https://www.facebook.com/mumbaihackathon">Facebook<img
+                                    class="link-arrow" src="img/arrow.svg"></a>
                         </li>
                     </ul>
-                    <a class="secondary-links" href="mailto:mumbaihackathon@erpnext.org">Write to us<img class="link-arrow" src="img/arrow.svg"></a>
+                    <a class="secondary-links" href="mailto:mumbaihackathon@erpnext.org">Write to us<img class="link-arrow"
+                            src="img/arrow.svg"></a>
                 </div>
-              </div>
-         </section>
-         <section class="footer">
-
-         </section>
+            </div>
+        </section>
+        <section class="footer">
+        </section>
     </div>
 
-	<script type="text/javascript"
-		src="/assets/frappe/js/lib/jquery/jquery.min.js"></script>
-	<script type="text/javascript"
-		src="/assets/js/frappe-web.min.js"></script>
+    <script type="text/javascript" src="/assets/frappe/js/lib/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/js/frappe-web.min.js"></script>
 
-	<script type="text/javascript" src="/website_script.js"></script>
+    <script type="text/javascript" src="/website_script.js"></script>
+    <script type="text/javascript" src="/console.js"></script>
 
-	<!-- <script>
+    <!-- <script>
 		function form_confirm() {
 			var fullname = $('input[name="name"]').val();
 			var email = $('input[name="email"]').val();
@@ -193,7 +184,8 @@
 				});
 			}
 		}
-	</script> --> 
+	</script> -->
 
 </body>
+
 </html>

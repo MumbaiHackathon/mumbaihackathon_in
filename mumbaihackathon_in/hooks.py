@@ -15,23 +15,23 @@ app_license = "MIT"
 # ------------------
 
 # include js, css files in header of desk.html
-# app_include_css = "/assets/mumbaihackathon_in/css/mumbaihackathon_in.css"
-# app_include_js = "/assets/mumbaihackathon_in/js/mumbaihackathon_in.js"
+app_include_css = "/assets/mumbaihackathon_in/css/mumbaihackathon_in.css"
+app_include_js = "/assets/mumbaihackathon_in/js/mumbaihackathon_in.js"
 
 # include js, css files in header of web template
-# web_include_css = "/assets/mumbaihackathon_in/css/mumbaihackathon_in.css"
-# web_include_js = "/assets/mumbaihackathon_in/js/mumbaihackathon_in.js"
+web_include_css = "/assets/mumbaihackathon_in/css/mumbaihackathon_in.css"
+web_include_js = "/assets/mumbaihackathon_in/js/mumbaihackathon_in.js"
 
 # Home Pages
 # ----------
 
 # application home page (will override Website Settings)
-# home_page = "login"
+home_page = "login"
 
 # website user home page (by Role)
-# role_home_page = {
-#	"Role": "home_page"
-# }
+role_home_page = {
+	"Guest": "index"
+}
 
 # Website user home page (by function)
 # get_website_user_home_page = "mumbaihackathon_in.utils.get_home_page"
