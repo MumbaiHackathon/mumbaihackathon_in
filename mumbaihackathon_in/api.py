@@ -9,17 +9,16 @@ import re
 
 @frappe.whitelist(allow_guest=True)
 def register(fullname, email, organization):
-	year = '2018'
-	if not frappe.get_list("Registration", filters={"email": email, "year": year}):
-		if re.match(r"^[A-Za-z0-9\.\+_-]+@[A-Za-z0-9\._-]+\.[a-zA-Z]*$", email):
-			regi = frappe.new_doc("Registration")
-			regi.fullname = fullname
-			regi.email = email
-			regi.organization = organization
-			regi.year = year
-			regi.save()
-			return "✓ Registration was successful"
-		else:
-			return "✘ Please enter a valid email"
-	else:
+	year = frappe.utils.today()[:4]
+
+	regi = frappe.new_doc("Registration")
+	regi.fullname = fullname
+	regi.email = email
+	regi.organization = organization
+	regi.year = year
+
+	try:
+		regi.save()
+		return "✓ Registration was successful"
+	except:
 		return "✘ You have already registered"
