@@ -11,54 +11,14 @@ class EmuTerm {
         this.container.innerHTML = this.get_template();
         this.lines_container = this.container.querySelector('.console-lines');
         this.command_input = this.container.querySelector('.console-input-command');
-        this.form_state = []
-        this.terminal_state = null;
-        this.inputs = {
-            register: {}
-        }
+        this.interactive_input = this.container.querySelector('.console-input-interactive');
 
         this.command_input.addEventListener('keydown', (e) => {
             const command = e.target.value
             if (e.keyCode === 13) {
-                // if (this.form_state.length || this.terminal_state) {
-                //     if (this.terminal_state) {
-                //         this.inputs.register[this.terminal_state.name] = command;
-                //         this.write_console(this.chalk('> ' + command, 'blue'));
-                //         e.target.value = ""
-                //     }
-                //     this.terminal_state = this.form_state.shift()
-                //     this.write_console(`${this.chalk(this.terminal_state.question, 'yellow')}`)
-                //     e.target.value = ""
-                //     return
-                // }
+                let return_value = this.options.handleCommand(command);
 
-                if (command == "clear") {
-                    this.clear_console()
-                    e.target.value = ""
-                    return;
-                }
-
-                if (command.split(/\s+/)[0] == "nav") {
-                    this.navigate(command.split(/\s+/)[1]);
-                    return;
-                }
-
-                // if (command == "register") {
-                //     this.form_state = [{
-                //             question: "What is your name?",
-                //             name: "full_name"
-                //         },
-                //         {
-                //             question: "What is your email address",
-                //             name: "email"
-                //         },
-                //     ]
-                //     return;
-                // }
-
-                let lines = this.options.handleCommand(command);
-
-                if (lines === false) {
+                if (return_value === false) {
                     this.write_console([
                         this.chalk('> ' + command),
                         `${this.chalk('command not found: ', 'pink')} ${command}`
@@ -67,20 +27,40 @@ class EmuTerm {
                     return;
                 }
 
-                lines = [
-                    this.chalk('> ' + command, 'blue'),
-                    ...lines
-                ];
+                this.write_console(this.chalk('> ' + command, 'blue'))
 
-                this.write_console(lines);
+                if (Array.isArray(return_value)) {
+                    this.write_console(return_value);
+                }
+
+                if (return_value.call) {
+                    // is a function
+                    return_value.call(this)
+                }
+
                 e.target.value = ""
-
             }
         })
     }
 
-    await_input() {
-        return "hello"
+    get_input() {
+        this.command_input.setAttribute('hidden', true);
+        this.interactive_input.removeAttribute('hidden');
+        this.interactive_input.focus();
+
+        return new Promise(resolve => {
+            const handle_input = (e) => {
+                if (e.key === 'Enter') {
+                    this.interactive_input.removeEventListener('keydown', handle_input);
+                    this.interactive_input.setAttribute('hidden', true);
+                    this.command_input.removeAttribute('hidden');
+                    const value = e.target.value;
+                    e.target.value = '';
+                    resolve(value);
+                }
+            }
+            this.interactive_input.addEventListener('keydown', handle_input);
+        })
     }
 
     clear_console() {
@@ -153,41 +133,22 @@ class EmuTerm {
                 </div>
                 <div class="command_area">
                     <span>>&nbsp;</span>
-                    <input autocomplete="off" id="command" class="console-input console-input-command" placeholder="start typing" />
+                    <input autofocus autocomplete="off" id="command" class="console-input console-input-command" placeholder="start typing" />
+                    <input autofocus autocomplete="off" id="command" class="console-input console-input-interactive" placeholder="start typing" hidden/>
                 </div>
             </div>
         `;
     }
 }
 
+let pages = {
+    'rules': '/rules',
+    'about': '/about',
+    'winners': '/winners'
+}
+
 const t = new EmuTerm(document.getElementById('terminal'), {
     no_of_lines: 12,
-    pages: [{
-            page: "rules",
-            link: "/rules",
-            place: "self"
-        },
-        {
-            page: "about",
-            link: "/about",
-            place: "self"
-        },
-        {
-            page: "winners",
-            link: "/2017/winners",
-            place: "self"
-        },
-        {
-            page: "github",
-            link: "https://github.com/mumbaihackathon",
-            place: "blank"
-        },
-        {
-            page: "projects",
-            link: "http://cicada3301.com/",
-            place: "blank"
-        }
-    ],
     handleCommand(command) {
         if (command === 'help') {
             return [
@@ -254,33 +215,58 @@ const t = new EmuTerm(document.getElementById('terminal'), {
         }
 
         if (command === 'pages') {
-            return this.pages.map((page) => page.page)
+            return Object.keys(pages)
         }
 
         if (command === 'register') {
-            return {
-                interactive: true,
-                questions: [
-                    {
-                        question: 'Name:',
-                        key: 'name'
-                    },
-                    {
-                        question: 'Email:',
-                        key: 'email'
-                    },
-                ],
-                callback(values) {
-                    console.log(values)
-                }
+            let questions = {
+                'Full Name?': 'fullname',
+                'Email?': 'email',
+                'Organization / College': 'organization',
             }
+            return async () => {
+                let values = {}
+
+                for (let question in questions) {
+                    const key = questions[question];
+                    t.write_console(question);
+                    values[key] = await t.get_input();
+                    t.write_console(values[key]);
+                }
+
+                frappe.call('mumbaihackathon_in.api.register', values)
+                    .then(r => {
+                        t.write_console(r.message);
+                    })
+                    .fail(r => {
+                        console.log(r)
+                    })
+            }
+        }
+
+        if (command.startsWith('nav')) {
+            const page = command.split('nav')[1].trim()
+            return () => {
+                const url = pages[page]
+                window.open(url);
+                t.write_console('Navigated to ' + url)
+            }
+        }
+
+        if (command === "clear") {
+            return clear_console
         }
 
         return false;
     }
 })
 
-t.write_console([
-    'Welcome to mumbai hackathon bash version 4.0.0',
-    'Type "help" for a list of available commands'
-])
+function clear_console() {
+    t.clear_console();
+    t.write_console([
+        'Welcome to mumbai hackathon bash version 4.0.0',
+        'Type "help" for a list of available commands'
+    ]);
+}
+
+clear_console();
