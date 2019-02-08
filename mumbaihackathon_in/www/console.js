@@ -229,7 +229,7 @@ const t = new EmuTerm(document.getElementById('terminal'), {
 
                 for (let question in questions) {
                     const key = questions[question];
-                    t.write_console(question);
+                    t.write_console(`${t.chalk(question, 'yellow')}`);
                     values[key] = await t.get_input();
                     t.write_console(values[key]);
                 }
