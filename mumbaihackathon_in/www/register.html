@@ -117,13 +117,17 @@
                         <input autocomplete="off" type='text' id="applicant-org" required name='organization'>
                     </div>
                     <div>
+                        <label for="applicant-org">How did you hear about us?</label>
+                        <input autocomplete="off" type='text' id="applicant-org" name='source'>
+                    </div>
+                    <div>
                         <label></label>
                         <button class="register" type="submit">
                             Register</button>
                     </div>
                 </fieldset>
+                <p class="message"></p>
             </form>
-            <p class="message"></p>
         </section>
         <section id="about-anchor" class="about">
             <div class="left">
@@ -170,6 +174,7 @@
 			var fullname = $('input[name="name"]').val();
 			var email = $('input[name="email"]').val();
 			var organization = $('input[name="organization"]').val();
+			var source = $('input[name="source"]').val();
 
 			if (!fullname) {
 				$('.message').html("Name is required");
@@ -190,6 +195,8 @@
 						fullname: fullname,
 						email: email,
 						organization: organization,
+                        source: source,
+                        registration_method: 'Form'
 					},
 					callback: function(r) {
 						if(!r.exc) {

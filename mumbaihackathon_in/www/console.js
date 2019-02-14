@@ -226,9 +226,12 @@ const t = new EmuTerm(document.getElementById('terminal'), {
                 'Full Name?': 'fullname',
                 'Email?': 'email',
                 'Organization / Institute': 'organization',
+                'How did you hear about us?': 'source'
             }
             return async () => {
-                let values = {}
+                let values = {
+                    'registration_method': 'Console'
+                }
 
                 for (let question in questions) {
                     const key = questions[question];

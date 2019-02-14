@@ -113,13 +113,17 @@
                                 <input autocomplete="off" type='text' id="applicant-org" required name='organization'>
                             </div>
                             <div>
+                                <label for="applicant-org">How did you hear about us?</label>
+                                <input autocomplete="off" type='text' id="applicant-org" required name='source'>
+                            </div>
+                            <div>
                                 <label></label>
                                 <button class="register" type="submit">
                                     Register</button>
                             </div>
                         </fieldset>
+                        <p class="message"></p>
                     </form>
-                    <p class="message"></p>
                 <h4 class="subtext">
                     Wanna see something cool? Open this site on a desktop
                 </h4>
@@ -175,7 +179,46 @@
 
     <script type="text/javascript" src="/website_script.js"></script>
     <script type="text/javascript" src="/console.js"></script>
+    <script>
+            function form_confirm() {
+                var fullname = $('input[name="name"]').val();
+                var email = $('input[name="email"]').val();
+                var organization = $('input[name="organization"]').val();
+                var source = $('input[name="source"]').val();
 
+                if (!fullname) {
+                    $('.message').html("Name is required");
+                    $('input[name="name"]').focus();
+                }
+
+                else if (!email) {
+                    $('.message').html("Email is required");
+                    $('input[name="email"]').focus();
+                }
+
+                else {
+                    $(".message").empty();
+                    frappe.call({
+                        method: "mumbaihackathon_in.api.register",
+                        type: "POST",
+                        args: {
+                            fullname: fullname,
+                            email: email,
+                            organization: organization,
+                            source: source,
+                            registration_method: 'Form'
+                        },
+                        callback: function(r) {
+                            if(!r.exc) {
+                                $('.message').html(r.message);
+                                // clear all inputs
+                                $("input").val("");
+                            }
+                        }
+                    });
+                }
+            }
+        </script>
 </body>
 
 </html>
