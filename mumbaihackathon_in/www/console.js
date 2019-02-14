@@ -268,7 +268,7 @@ const t = new EmuTerm(document.getElementById('terminal'), {
 function clear_console() {
     t.clear_console();
     t.write_console([
-        'Welcome to mumbai hackathon bash version 4.0.0',
+        'Welcome to Mumbai Hackathon v4.0',
         'Type "help" for a list of available commands'
     ]);
 }
