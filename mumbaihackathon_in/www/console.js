@@ -183,7 +183,7 @@ const t = new EmuTerm(document.getElementById('terminal'), {
 
         if (command === 'pwd') {
             return [
-                '/Users/hackthon_2019/',
+                '/Users/hackathon_2019/',
             ]
         }
 
@@ -214,7 +214,6 @@ const t = new EmuTerm(document.getElementById('terminal'), {
                 `The product of these numbers is 26 × 63 × 78 × 14 = 1788696.`,
                 `What is the greatest product of four adjacent numbers in the`,
                 `same direction (up, down, left, right, or diagonally) in the 20×20 grid?`,
-                `15-3-87-97-94-89`
             ]
         }
 
