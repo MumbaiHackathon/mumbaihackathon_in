@@ -8,12 +8,13 @@ import re
 
 
 @frappe.whitelist(allow_guest=True)
-def register(fullname, email, organization, source="Form", registration_method=None):
+def register(fullname, email, organization, team_name=None, source="Form", registration_method=None):
 	year = frappe.utils.today()[:4]
 
 	regi = frappe.new_doc("Registration")
 	regi.fullname = fullname
 	regi.email = email
+	regi.team_name = team_name
 	regi.organization = organization
 	regi.source = source
 	regi.registration_method = registration_method
