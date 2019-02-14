@@ -269,6 +269,10 @@ h1 {
 	text-decoration: none;
 }
 
+.bold-white {
+	color: #fff
+}
+
 .secondary-links:hover {
 	color: #FFF300;
 }
@@ -403,7 +407,56 @@ p {
 	margin-bottom: 1em;
 }
 
+.application-form {
+	display: block;
+	max-width: 300px;
+	width: 100%;
+}
+
 /*media querry*/
+@media screen and (max-width: 968px) {
+	.home {
+		padding-right: 2em;
+		padding-left: 2em;
+	}
+
+	.logo-link {
+		margin: 0 !important;
+		padding-top: 3em;
+	}
+
+	.right {
+		margin: 0;
+	}
+
+	.left {
+		margin: 0;
+	}
+
+	#terminal {
+		display: none;
+	}
+
+	#about-anchor {
+		padding-top: 2em;
+	}
+
+	#register {
+		display: none;
+	}
+
+	.about-links {
+		padding-left: 2em;
+	}
+
+	.nav-list {
+		display: block;
+		float: left;
+		margin-top: 1em;
+		background-color: rgba(255, 255, 255, 0.1);
+		border-radius: 25px;
+	}
+}
 
 @media screen and (min-width: 1024px) {
 	.home {
@@ -412,6 +465,10 @@ p {
 
 	.about {
 		margin: 5% auto 2%;
+	}
+
+	#mobile-section {
+		display: none;
 	}
 
 	.about-links,
@@ -462,7 +519,7 @@ input {
 	padding: 0.2em 0.5em;
 	color: #d8d8d8;
 	float: right;
-	width: 300px;
+	width: 280px;
 	font-size: inherit;
 }
 
@@ -513,9 +570,17 @@ button:hover {
 
 button.register {
 	margin-top: 2em;
-	float: right;
+	float: left;
 }
 
+.subtext {
+	padding-top: 1em;
+	font-size: 20px;
+	line-height: 1.5;
+}
+.logo-link {
+	text-decoration: none;
+}
 
 /* form error
 input:invalid{

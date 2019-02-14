@@ -84,31 +84,23 @@
 <body>
     <div class="wrapper">
         <section class="about">
-            <div class="left">
+            <a href="/" class="logo-link left">
                 <h1 id="logo-text"><span class="accent">मुंबई</span> Hackathon</h1>
-            </div>
+            </a>
             <div class="right">
-                <div class="nav-list">
-                    <span class="nav-item"><a class="secondary-links" href="/rules">Rules</a></span>
-                    <span class="nav-item">About</span>
-                    <span class="nav-item"><a class="secondary-links" href="mailto:mumbaihackathon@erpnext.org">Write
-                            to Us</a></span>
+                    <div class="nav-list">
+                            <span id="register" class="nav-item"><a class="secondary-links" href="/register">Register</a></span>
+                            <span class="nav-item"><a class="secondary-links" href="/rules">Rules</a></span>
+                            <span class="nav-item"><a class="secondary-links" href="/2018/winners">Past Winners</a></span>
+                        </div>
                 </div>
-            </div>
         </section>
         <section class="home">
-            <!-- <img src="img/logo.svg" alt="Mumbai Hackathon"> -->
-            <h4 style="font-size: 20px; line-height: 1.5;">
-                Every year, ERPNext Foundation & Don Bosco Institute of Technology welcomes students,
-                developers and designers from across the country to create incredible open source projects at Mumbai's
-                largest Open Source Hackathon.
-            </h4>
-            <!-- <ul>
-                <li id="prize">₹ 100,000 Cash Prize</li>
-                <li id="dates">15th & 16th March 2019</li>
-            </ul> -->
-        </section>
-        <section class="home" style="width: 30%">
+                <h4 class="subtext">
+                    Hack with us at <a class="secondary-links" href="https://goo.gl/maps/WmifWU2Wckx" target="_blank">Don Bosco</a> on 16th and 17th March and win ₹75,000 Cash Prize.
+                </h4>
+            </section>
+        <section class="home">
             <form class="application-form" autocomplete="off" action="javascript:form_confirm()">
                 <fieldset>
                     <div>
@@ -121,7 +113,7 @@
                             required name='email'>
                     </div>
                     <div>
-                        <label for="applicant-org">Organization / College</label>
+                        <label for="applicant-org">Institute</label>
                         <input autocomplete="off" type='text' id="applicant-org" required name='organization'>
                     </div>
                     <div>

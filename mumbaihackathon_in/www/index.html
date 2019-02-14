@@ -42,7 +42,6 @@
     <meta property="og:site_name" content="Mumbai Hackathon - 2019" />
 
     <!-- End of Meta Tags-->
-
     <link rel="stylesheet" href="css/main.css">
     <link rel="canonical" href="https://mumbaihackathon.in" />
 
@@ -81,31 +80,62 @@
 <body>
     <div class="wrapper">
         <section class="about">
-            <a href="/" class="left">
+            <a href="/" class="logo-link left">
                 <h1 id="logo-text"><span class="accent">मुंबई</span> Hackathon</h1>
             </a>
             <div class="right">
                 <div class="nav-list">
-                    <span class="nav-item"><a class="secondary-links" href="/register">Register</a></span>
+                    <span id="register" class="nav-item"><a class="secondary-links" href="/register">Register</a></span>
                     <span class="nav-item"><a class="secondary-links" href="/rules">Rules</a></span>
-                    <span class="nav-item"><a class="secondary-links" href="mailto:mumbaihackathon@erpnext.org">Write
-                            to Us</a></span>
+                    <span class="nav-item"><a class="secondary-links" href="/2018/winners">Past Winners</a></span>
                 </div>
             </div>
         </section>
         <section class="home">
-            <!-- <img src="img/logo.svg" alt="Mumbai Hackathon"> -->
-            <h4 style="font-size: 20px; line-height: 1.5;">
+            <h4 class="subtext">
+                Hack with us at <a class="secondary-links" href="https://goo.gl/maps/WmifWU2Wckx" target="_blank">Don Bosco</a> on <span class="bold-white">16th and 17th March</span> and win <span class="bold-white">₹75,000</span> Cash Prize.
+            </h4>
+        </section>
+        <section id="mobile-section" class="home">
+                <form class="application-form" autocomplete="off" action="javascript:form_confirm()">
+                        <fieldset>
+                            <div>
+                                <label for="applicant-name">Name</label>
+                                <input autocomplete="off" type='text' id="applicant-name" required name='name'>
+                            </div>
+                            <div>
+                                <label for="applicant-email">Email</label>
+                                <input autocomplete="off" type='email' id="applicant-email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                                    required name='email'>
+                            </div>
+                            <div>
+                                <label for="applicant-org">Institute</label>
+                                <input autocomplete="off" type='text' id="applicant-org" required name='organization'>
+                            </div>
+                            <div>
+                                <label></label>
+                                <button class="register" type="submit">
+                                    Register</button>
+                            </div>
+                        </fieldset>
+                    </form>
+                    <p class="message"></p>
+                <h4 class="subtext">
+                    Wanna see something cool? Open this site on a desktop
+                </h4>
+        </section>
+        <section id="terminal" class="about"></section>
+        <!-- <section class="home">
+            <h4 class="subtext">
                 Every year, ERPNext Foundation & Don Bosco Institute of Technology welcomes students,
                 developers and designers from across the country to create incredible open source projects at Mumbai's
                 largest Open Source Hackathon.
             </h4>
-            <!-- <ul>
+            <ul>
                 <li id="prize">₹ 100,000 Cash Prize</li>
-                <li id="dates">15th & 16th March 2019</li>
-            </ul> -->
-        </section>
-        <section id="terminal" class="about"></section>
+                <li id="dates">16th & 17th March 2019</li>
+            </ul>
+        </section> -->
         <section id="about-anchor" class="about">
             <div class="left">
                 <img class="inner-logo" src="img/logo.svg" alt="Mumbai hackathon">
@@ -118,7 +148,7 @@
                             <a class="secondary-links" href="/rules">Rules<img class="link-arrow" src="img/arrow.svg"></a>
                         </li>
                         <li>
-                            <a class="secondary-links" href="/2017/winners">Past Winners<img class="link-arrow" src="img/arrow.svg"></a>
+                            <a class="secondary-links" href="/2018/winners">Past Winners<img class="link-arrow" src="img/arrow.svg"></a>
                         </li>
                     </ul>
                     <ul class="lists">
