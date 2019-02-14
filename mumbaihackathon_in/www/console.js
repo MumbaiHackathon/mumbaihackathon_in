@@ -14,33 +14,37 @@ class EmuTerm {
         this.interactive_input = this.container.querySelector('.console-input-interactive');
 
         this.command_input.addEventListener('keydown', (e) => {
-            const command = e.target.value
             if (e.keyCode === 13) {
-                let return_value = this.options.handleCommand(command);
-
-                if (return_value === false) {
-                    this.write_console([
-                        this.chalk('> ' + command),
-                        `${this.chalk('command not found: ', 'pink')} ${command}`
-                    ])
-                    e.target.value = ""
-                    return;
-                }
-
-                this.write_console(this.chalk('> ' + command, 'blue'))
-
-                if (Array.isArray(return_value)) {
-                    this.write_console(return_value);
-                }
-
-                if (return_value.call) {
-                    // is a function
-                    return_value.call(this)
-                }
-
-                e.target.value = ""
+                this.handle_command(e.target);
             }
         })
+    }
+
+    handle_command(target) {
+        const command = target.value
+        let return_value = this.options.handleCommand(command);
+
+        if (return_value === false) {
+            this.write_console([
+                this.chalk('> ' + command),
+                `${this.chalk('command not found: ', 'pink')} ${command}`
+            ])
+            target.value = ""
+            return;
+        }
+
+        this.write_console(this.chalk('> ' + command, 'blue'))
+
+        if (Array.isArray(return_value)) {
+            this.write_console(return_value);
+        }
+
+        if (return_value.call) {
+            // is a function
+            return_value.call(this)
+        }
+
+        target.value = ""
     }
 
     get_input() {
@@ -153,11 +157,11 @@ const t = new EmuTerm(document.getElementById('terminal'), {
         if (command === 'help') {
             return [
                 'Available commands:',
-                `${t.chalk('nav &lt;page&gt;', 'yellow', '150')} Navigate between pages.`,
                 `${t.chalk('register', 'yellow', '150')} Register your team.`,
                 `${t.chalk('about', 'yellow', '150')} About Mumbai Hackathon.`,
-                `${t.chalk('clear', 'yellow', '150')} Clear bash.`,
                 `${t.chalk('pages', 'yellow', '150')} List of pages to navigate.`,
+                `${t.chalk('nav &lt;page&gt;', 'yellow', '150')} Navigate between pages.  (e.g nav rules)`,
+                `${t.chalk('clear', 'yellow', '150')} Clear bash.`,
                 `${t.chalk('ls', 'yellow', '150')} List directory contents.`
             ]
         }
@@ -270,3 +274,19 @@ function clear_console() {
 }
 
 clear_console();
+
+// setTimeout(() => {
+//     t.command_input.value = 'h'
+//     setTimeout(() => {
+//         t.command_input.value = 'he'
+//     }, 100)
+//     setTimeout(() => {
+//         t.command_input.value = 'hel'
+//     }, 200)
+//     setTimeout(() => {
+//         t.command_input.value = 'help'
+//     }, 300)
+//     setTimeout(() => {
+//         t.handle_command(t.command_input)
+//     }, 400)
+// }, 2000);
