@@ -109,6 +109,10 @@
                                     required name='email'>
                             </div>
                             <div>
+                                <label for="applicant-email">Team Name</label>
+                                <input autocomplete="off" id="applicant-email" required name='team_name'>
+                            </div>
+                            <div>
                                 <label for="applicant-org">Institute</label>
                                 <input autocomplete="off" type='text' id="applicant-org" required name='organization'>
                             </div>
@@ -185,6 +189,7 @@
                 var email = $('input[name="email"]').val();
                 var organization = $('input[name="organization"]').val();
                 var source = $('input[name="source"]').val();
+                var team_name = $('input[name="team_name"]').val();
 
                 if (!fullname) {
                     $('.message').html("Name is required");
@@ -205,6 +210,7 @@
                             fullname: fullname,
                             email: email,
                             organization: organization,
+                            team_name: team_name,
                             source: source,
                             registration_method: 'Form'
                         },

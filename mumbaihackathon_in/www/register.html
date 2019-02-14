@@ -113,6 +113,10 @@
                             required name='email'>
                     </div>
                     <div>
+                        <label for="applicant-email">Team Name</label>
+                        <input autocomplete="off" id="applicant-email" required name='team_name'>
+                    </div>
+                    <div>
                         <label for="applicant-org">Institute</label>
                         <input autocomplete="off" type='text' id="applicant-org" required name='organization'>
                     </div>
@@ -170,45 +174,47 @@
     <script type="text/javascript" src="/console.js"></script>
 
     <script>
-		function form_confirm() {
-			var fullname = $('input[name="name"]').val();
-			var email = $('input[name="email"]').val();
-			var organization = $('input[name="organization"]').val();
-			var source = $('input[name="source"]').val();
+            function form_confirm() {
+                var fullname = $('input[name="name"]').val();
+                var email = $('input[name="email"]').val();
+                var organization = $('input[name="organization"]').val();
+                var source = $('input[name="source"]').val();
+                var team_name = $('input[name="team_name"]').val();
 
-			if (!fullname) {
-				$('.message').html("Name is required");
-				$('input[name="name"]').focus();
-			}
+                if (!fullname) {
+                    $('.message').html("Name is required");
+                    $('input[name="name"]').focus();
+                }
 
-			else if (!email) {
-				$('.message').html("Email is required");
-				$('input[name="email"]').focus();
-			}
+                else if (!email) {
+                    $('.message').html("Email is required");
+                    $('input[name="email"]').focus();
+                }
 
-			else {
-				$(".message").empty();
-				frappe.call({
-					method: "mumbaihackathon_in.api.register",
-					type: "POST",
-					args: {
-						fullname: fullname,
-						email: email,
-						organization: organization,
-                        source: source,
-                        registration_method: 'Form'
-					},
-					callback: function(r) {
-						if(!r.exc) {
-							$('.message').html(r.message);
-							// clear all inputs
-							$("input").val("");
-						}
-					}
-				});
-			}
-		}
-	</script>
+                else {
+                    $(".message").empty();
+                    frappe.call({
+                        method: "mumbaihackathon_in.api.register",
+                        type: "POST",
+                        args: {
+                            fullname: fullname,
+                            email: email,
+                            organization: organization,
+                            team_name: team_name,
+                            source: source,
+                            registration_method: 'Form'
+                        },
+                        callback: function(r) {
+                            if(!r.exc) {
+                                $('.message').html(r.message);
+                                // clear all inputs
+                                $("input").val("");
+                            }
+                        }
+                    });
+                }
+            }
+        </script>
 
 </body>
 
