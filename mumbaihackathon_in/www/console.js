@@ -225,28 +225,54 @@ const t = new EmuTerm(document.getElementById('terminal'), {
             let questions = {
                 'Full Name?': 'fullname',
                 'Email?': 'email',
-                'Organization / Institute': 'organization',
-                'How did you hear about us?': 'source'
+                'Team Name? (Optional)': 'team_name',
+                'Organization / Institute?': 'organization',
+                'How did you hear about us? (Optional)': 'source'
             }
             return async () => {
                 let values = {
                     'registration_method': 'Console'
                 }
 
-                for (let question in questions) {
+                // for (let question in questions) {
+                //     const key = questions[question];
+                //     t.write_console(`${t.chalk(question, 'yellow')}`);
+                //     values[key] = await t.get_input();
+                //     t.write_console(values[key]);
+                // }
+
+                let index = 0;
+                while(Object.keys(questions)[index]) {
+                    const question = Object.keys(questions)[index]
                     const key = questions[question];
+
                     t.write_console(`${t.chalk(question, 'yellow')}`);
-                    values[key] = await t.get_input();
-                    t.write_console(values[key]);
+                    const value = await t.get_input();
+                    const required = !question.includes('Optional');
+                    if (value) {
+                        values[key] = value;
+                        t.write_console(value);
+                        index++;
+                    } else if (!value && !required) {
+                        index++;
+                    }
                 }
 
-                frappe.call('mumbaihackathon_in.api.register', values)
-                    .then(r => {
-                        t.write_console(r.message);
-                    })
-                    .fail(r => {
-                        console.log(r)
-                    })
+                frappe.call({
+                    method: 'mumbaihackathon_in.api.register',
+                    args: values,
+                    error_msg: '<div>'
+                }).then(r => {
+                    let message = r.message;
+                    if (message.includes('success')) {
+                        message = t.chalk(message, 'green');
+                    } else {
+                        message = t.chalk(message, 'pink');
+                    }
+                    t.write_console(message);
+                }).fail(r => {
+                    console.log(r)
+                })
             }
         }
 
