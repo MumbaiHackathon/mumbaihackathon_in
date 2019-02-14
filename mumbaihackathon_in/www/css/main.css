@@ -515,11 +515,10 @@ input {
 	border-left: none;
 	border-right: none;
 	border-top: none;
-	line-height: 2em;
-	padding: 0.2em 0.5em;
+	line-height: 1.5;
+    padding: 0.2em 0.5em;
 	color: #d8d8d8;
-	float: right;
-	width: 280px;
+	width: 100%;
 	font-size: inherit;
 }
 
@@ -537,6 +536,7 @@ input:-webkit-autofill:focus {
 
 .application-form {
 	margin-top: 60px;
+	overflow: hidden;
 }
 
 .message {
@@ -544,8 +544,9 @@ input:-webkit-autofill:focus {
 }
 
 form div {
-	padding: 1em;
+	/* padding: 1em; */
 	text-align: left;
+	margin-bottom: 1.5rem;
 }
 
 form {
@@ -606,7 +607,7 @@ border-bottom: solid #e65a5a 2px;
 .console-input {
 	font-family: monospace;
 	color: #fff;
-	;
+
 	background-color: #000;
 }
 
