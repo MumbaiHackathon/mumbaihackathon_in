@@ -192,6 +192,10 @@ body {
 	background-color: #15191e;
 }
 
+h1 {
+	font: normal 1em / 2 "Khand", sans-serif;
+}
+
 .home {
 	max-width: 960px;
 }
