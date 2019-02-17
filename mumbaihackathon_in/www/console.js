@@ -89,7 +89,7 @@ class EmuTerm {
 
     refresh_lines() {
         const lines_html = this.line_buffer.map((content, i) =>
-            `<p data-type="empty" data-line-no="${i}">${content || '&nbsp;'}</p>`).join('');
+            `<p class="my-5" data-type="empty" data-line-no="${i}">${content || '&nbsp;'}</p>`).join('');
         this.lines_container.innerHTML = lines_html;
         this.lines_container.scrollTop = this.lines_container.scrollHeight;
     }
@@ -137,8 +137,8 @@ class EmuTerm {
                 </div>
                 <div class="command_area">
                     <span>>&nbsp;</span>
-                    <input autofocus autocomplete="off" id="command" class="console-input console-input-command" placeholder="start typing" />
-                    <input autofocus autocomplete="off" id="command" class="console-input console-input-interactive" placeholder="start typing" hidden/>
+                    <input autofocus autocomplete="off" id="command" class="console-input console-input-command outline-none" placeholder="start typing" />
+                    <input autofocus autocomplete="off" id="command" class="console-input console-input-interactive outline-none" placeholder="start typing" hidden/>
                 </div>
             </div>
         `;
