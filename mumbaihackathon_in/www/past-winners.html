@@ -1,0 +1,47 @@
+{% extends "templates/hackathon.html" %}
+
+{% block title %}Winners - Mumbai Hackathon 2019{% endblock %}
+
+{% block body %}
+<div class="flex flex-wrap mt-8">
+    <div class="w-full text-white leading-normal">
+        <h2 class="text-white text-3xl">Past Winners</h2>
+
+        {% for d in winners %}
+        <h3 class="text-white text-2xl mt-8">{{ d.year }}</h3>
+        <div class="text-lg text-white mt-4">
+            <div class="text-yellow mt-2">Winners</div>
+            <ul>
+                {% for w in d.winners %}
+                <li>
+                    <a href="{{ w.github_url }}" class="no-underline text-white hover:text-yellow" rel="noreferrer noopener" target="_blank">
+                        {{ w.project_name }}
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+            <div class="text-yellow mt-2">1st Runner Ups</div>
+            <ul>
+                {% for w in d.first_runnerups %}
+                <li>
+                    <a href="{{ w.github_url }}" class="no-underline text-white hover:text-yellow" rel="noreferrer noopener" target="_blank">
+                        {{ w.project_name }}
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+            <div class="text-yellow mt-2">2nd Runner Ups</div>
+            <ul>
+                {% for w in d.second_runnerups %}
+                <li>
+                    <a href="{{ w.github_url }}" class="no-underline text-white hover:text-yellow" rel="noreferrer noopener" target="_blank">
+                        {{ w.project_name }}
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
