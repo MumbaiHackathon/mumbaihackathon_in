@@ -170,7 +170,7 @@ const t = new EmuTerm(document.getElementById('terminal'), {
                 '--------- Mumbai Hackathon 2019 (⌐■_■) ---------',
                 `${t.chalk('16th and 17th March', 'yellow')}`,
                 `${t.chalk('Don Bosco Institute of Technology, Kurla', 'yellow')}`,
-                `${t.chalk('₹ 75,000 Cash Prize', 'yellow')}`,
+                `${t.chalk('₹ 50,000 Cash Prize', 'yellow')}`,
                 `Type the command ${t.chalk('register', 'blue')} to participate.`
             ]
         }
