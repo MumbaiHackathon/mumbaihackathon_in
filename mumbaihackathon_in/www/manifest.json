@@ -1,0 +1,21 @@
+{
+	"short_name": "मुंबई Hackathon",
+	"name": "Mumbai Hackathon 2019",
+	"icons": [
+	{
+		"src": "/img/android-icon-192x192.png",
+		"type": "image/png",
+		"sizes": "192x192"
+	},
+	{
+		"src": "/img/apple-icon.png",
+		"type": "image/png",
+		"sizes": "512x512"
+	}
+	],
+	"start_url": "/?source=pwa",
+	"background_color": "#15191e",
+	"display": "standalone",
+	"scope": "/",
+	"theme_color": "#fff300"
+}
