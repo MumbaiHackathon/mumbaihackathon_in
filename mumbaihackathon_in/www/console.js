@@ -137,8 +137,8 @@ class EmuTerm {
                 </div>
                 <div class="command_area">
                     <span>>&nbsp;</span>
-                    <input autofocus autocomplete="off" id="command" class="console-input console-input-command outline-none" placeholder="start typing" />
-                    <input autofocus autocomplete="off" id="command" class="console-input console-input-interactive outline-none" placeholder="start typing" hidden/>
+                    <input autofocus autocomplete="off" id="command" class="console-input console-input-command outline-none" autocorrect="off" autocapitalize="none" placeholder="start typing" />
+                    <input autofocus autocomplete="off" id="command" class="console-input console-input-interactive outline-none" autocorrect="off" autocapitalize="none" placeholder="start typing" hidden/>
                 </div>
             </div>
         `;
