@@ -1,3 +1,6 @@
+input {
+	outline: none;
+}
 
 .console {
 	position: relative;
