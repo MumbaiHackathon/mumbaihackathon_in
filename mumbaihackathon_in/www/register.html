@@ -95,25 +95,19 @@
 
                 else {
                     $(".message").empty();
-                    frappe.call({
-                        method: "mumbaihackathon_in.api.register",
-                        type: "POST",
-                        args: {
-                            fullname: fullname,
-                            email: email,
-                            organization: organization,
-                            team_name: team_name,
-                            source: source,
-                            registration_method: 'Form'
-                        },
-                        callback: function(r) {
-                            if(!r.exc) {
-                                $('.message').html(r.message);
-                                // clear all inputs
-                                $("input").val("");
-                            }
-                        }
-                    });
+                    const values = {
+                        fullname: fullname,
+                        email: email,
+                        organization: organization,
+                        team_name: team_name,
+                        source: source,
+                        registration_method: 'Form'
+                    }
+                    register(values)
+                        .then(message => {
+                            $('.message').html(message);
+                            $("input").val("");
+                        });
                 }
             }
         </script>

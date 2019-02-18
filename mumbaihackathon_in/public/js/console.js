@@ -258,21 +258,16 @@ const t = new EmuTerm(document.getElementById('terminal'), {
                     }
                 }
 
-                frappe.call({
-                    method: 'mumbaihackathon_in.api.register',
-                    args: values,
-                    error_msg: '<div>'
-                }).then(r => {
-                    let message = r.message;
-                    if (message.includes('success')) {
-                        message = t.chalk(message, 'green');
-                    } else {
-                        message = t.chalk(message, 'pink');
-                    }
-                    t.write_console(message);
-                }).fail(r => {
-                    console.log(r)
-                })
+                register(values)
+                    .then(message => {
+                        if (!message) return;
+                        if (message.includes('success')) {
+                            message = t.chalk(message, 'green');
+                        } else {
+                            message = t.chalk(message, 'pink');
+                        }
+                        t.write_console(message);
+                    })
             }
         }
 

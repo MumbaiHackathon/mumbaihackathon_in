@@ -48,7 +48,7 @@
     <meta property="og:site_name" content="Mumbai Hackathon - 2019" />
 
     <!-- End of Meta Tags-->
-    <link rel="stylesheet" href="/assets/mumbaihackathon_in/css/hack.css">
+    <link rel="stylesheet" href="/assets/mumbaihackathon_in/css/build/hack.css">
     <link rel="stylesheet" href="/assets/mumbaihackathon_in/css/console.css">
     <link rel="canonical" href="{{ frappe.utils.get_url() }}" />
 
@@ -97,8 +97,29 @@
     </div>
     </div>
     {% block scripts %} {% endblock %}
-    <script type="text/javascript" src="/assets/frappe/js/lib/jquery/jquery.min.js"></script>
-    <script type="text/javascript" src="/assets/js/frappe-web.min.js"></script>
-    <script type="text/javascript" src="/website_script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            window.register = (values) => {
+                return fetch('/api/method/mumbaihackathon_in.api.register', {
+                    method: 'POST',
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Accept": "application/json"
+                    },
+                    body: JSON.stringify(values)
+                }).then(async (response) => {
+                    if (response.ok) {
+                        const r = await response.json();
+                        let message = r.message;
+                        return message;
+                    } else {
+                        console.log(response);
+                        return null;
+                    }
+                });
+            }
+        })
+    </script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 </body>
 </html>
