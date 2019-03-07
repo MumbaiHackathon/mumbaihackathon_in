@@ -148,7 +148,7 @@ class EmuTerm {
 let pages = {
     'rules': '/rules',
     'about': '/about',
-    'winners': '/winners'
+    'winners': '/past-winners'
 }
 
 const t = new EmuTerm(document.getElementById('terminal'), {
