@@ -20,6 +20,7 @@
                 </li>
                 {% endfor %}
             </ul>
+            {% if d.first_runnerups %}
             <div class="text-yellow mt-2">1st Runner Ups</div>
             <ul>
                 {% for w in d.first_runnerups %}
@@ -30,6 +31,8 @@
                 </li>
                 {% endfor %}
             </ul>
+            {% endif %}
+            {% if d.second_runnerups %}
             <div class="text-yellow mt-2">2nd Runner Ups</div>
             <ul>
                 {% for w in d.second_runnerups %}
@@ -40,6 +43,7 @@
                 </li>
                 {% endfor %}
             </ul>
+            {% endif %}
         </div>
         {% endfor %}
     </div>
