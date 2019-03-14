@@ -169,4 +169,33 @@ def get_context(context):
                     "Rijan Ramavat"
                 ]
             }]
+        }, {
+            'year': '2016',
+            'winners': [{
+                "project_name": "Gig Alert",
+                "project_descp": "A webapp for fans to stay informed about their favourite live (music) gigs",
+                "github_url": "https://github.com/MumbaiHackathon/gig-alert",
+                "team_members": [
+                    "Akhilesh Darjee",
+                    "Navin Kulkarni",
+                    "Pramod Pandey"
+                ]
+            }, {
+                "project_name": "Bling",
+                "project_descp": "An app for quickly asking questions / taking polls / requesting locations",
+                "github_url": "https://github.com/MumbaiHackathon/bling-mh16",
+                "team_members": [
+                    "Faris Ansari",
+                    "Suraj Shetty"
+                ]
+            }, {
+                "project_name": "Eldian",
+                "project_descp": "A password management software with encrypted note sharing",
+                "github_url": "https://github.com/MumbaiHackathon/Eldian",
+                "team_members": [
+                    "Deven Bhalerao",
+                    "Nicky Dcruz",
+                    "Leo Thomson"
+                ]
+            }],
         }]
