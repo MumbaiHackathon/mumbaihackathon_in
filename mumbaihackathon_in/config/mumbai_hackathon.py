@@ -27,7 +27,7 @@ def get_data():
 			"items": [
 				{
 					"type": "doctype",
-					"name": "Evaluation",
+					"name": "Hackathon Evaluation",
 				},
 				{
 					"type": "doctype",
