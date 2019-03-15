@@ -6,10 +6,11 @@ def get_data():
 	return [
 		{
 			"module_name": "Mumbai Hackathon",
+			"category": "Places",
+			"label": _("Mumbai Hacakthon"),
 			"color": "grey",
 			"icon": "octicon octicon-file-directory",
-			"type": "list",
-			"link": "List/Registration",
-			"label": _("Mumbai Hackathon")
+			"type": "module",
+			"description": "Registartion, teams and evaluation."
 		}
 	]
