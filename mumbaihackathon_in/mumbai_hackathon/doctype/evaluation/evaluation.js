@@ -13,13 +13,8 @@ frappe.ui.form.on('Evaluation', {
 			frm.refresh()
 		})
 	},
-});
 
-
-frappe.ui.form.on("Project Evaluation", {
-	score: function(frm, cdt, cdn) {
-		console.log("Hello")
-		let row = locals[cdt][cdn];
-		console.log(row)
+	onload: function(frm) {
+		frm.doc.evaluator = frappe.session.user
 	}
 });
