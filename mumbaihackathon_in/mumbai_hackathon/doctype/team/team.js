@@ -2,14 +2,11 @@
 // For license information, please see license.txt
 
 frappe.ui.form.on('Team', {
-	assigned_room: function(frm) {
+	assigned_room: function (frm) {
 		frappe.call("mumbaihackathon_in.mumbai_hackathon.doctype.room.room.get_count", {
 			room_name: frm.doc.assigned_room
 		}).then((data) => {
-			let message = "Room is Full"
-			if(data.message > 0){
-				let message = "Capacity: " + data.message + " People"
-			}
+			let message = "Capacity: " + data.message + " People"
 			frm.set_df_property('assigned_room', 'description', message)
 		})
 	},
