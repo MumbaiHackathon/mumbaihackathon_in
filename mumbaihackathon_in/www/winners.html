@@ -5,20 +5,19 @@
 {% block body %}
 <div class="flex flex-wrap mt-8">
     <div class="w-full text-white leading-normal">
-        <h2 class="text-white text-5xl">Winners 2019 🎉</h2>
+        <h2 class="text-white text-4xl">Winners 2019 🎉</h2>
         <div class="text-lg text-white mt-4">
             <div class="flex flex-wrap mb-10">
                 <div class="w-full md:w-1/3 text-yellow text-2xl">Winner</div>
                 <div class="w-full md:w-2/3">
                     {% for w in winners.winners %}
-                        <div class="text-4xl">
+                        <div class="text-3xl">
                             <a href="{{ w.github_url }}" class="no-underline text-white hover:text-yellow" rel="noreferrer noopener" target="_blank">
                                 {{ w.project_name }}
                             </a>
                         </div>
                         {{ w.project_descp }}
                         <div class="text-base">
-                            <div>Team Members:</div>
                             <ul class="mt-2">
                                 {% for member in w.team_members %}
                                 <li>{{ member }}</li>
@@ -34,14 +33,13 @@
                 <div class="w-full md:w-2/3">
                     {% for w in winners.first_runnerups %}
                         <div class="mb-4">
-                            <div class="text-4xl">
+                            <div class="text-3xl">
                                 <a href="{{ w.github_url }}" class="no-underline text-white hover:text-yellow" rel="noreferrer noopener" target="_blank">
                                     {{ w.project_name }}
                                 </a>
                             </div>
                             {{ w.project_descp }}
                             <div class="text-base">
-                                <div>Team Members:</div>
                                 <ul class="mt-2">
                                     {% for member in w.team_members %}
                                     <li>{{ member }}</li>
@@ -58,14 +56,13 @@
                 <div class="w-full md:w-2/3">
                     {% for w in winners.second_runnerups %}
                         <div class="mb-4">
-                            <div class="text-4xl">
+                            <div class="text-3xl">
                                 <a href="{{ w.github_url }}" class="no-underline text-white hover:text-yellow" rel="noreferrer noopener" target="_blank">
                                     {{ w.project_name }}
                                 </a>
                             </div>
                             {{ w.project_descp }}
                             <div class="text-base">
-                                <div>Team Members:</div>
                                 <ul class="mt-2">
                                     {% for member in w.team_members %}
                                     <li>{{ member }}</li>
