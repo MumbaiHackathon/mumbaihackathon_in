@@ -157,6 +157,7 @@ const t = new EmuTerm(document.getElementById('terminal'), {
         if (command === 'help') {
             return [
                 'Available commands:',
+                `${t.chalk('winners', 'yellow', '150')} 2019 Winners.`,
                 `${t.chalk('register', 'yellow', '150')} Register your team.`,
                 `${t.chalk('about', 'yellow', '150')} About Mumbai Hackathon.`,
                 `${t.chalk('pages', 'yellow', '150')} List of pages to navigate.`,
@@ -217,11 +218,31 @@ const t = new EmuTerm(document.getElementById('terminal'), {
             ]
         }
 
+        if (command === 'winners') {
+            return [
+                `┌────────────────────┬──────────────────────┬──────────┬──────────────┐`,
+                `│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rank&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Team&nbsp;Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;Team&nbsp;ID&nbsp;&nbsp;│&nbsp;Project&nbsp;Name&nbsp;│`,
+                `├────────────────────┼──────────────────────┼──────────┼──────────────┤`,
+                `│&nbsp;1st&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;The&nbsp;Futurist&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;TEAM-061&nbsp;│&nbsp;CaeliScribo&nbsp;&nbsp;│`,
+                `│&nbsp;2nd&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;Undefined&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;TEAM-062&nbsp;│&nbsp;LegoDoc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│`,
+                `│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;Alspark&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;TEAM-033&nbsp;│&nbsp;HandySnake&nbsp;&nbsp;&nbsp;│`,
+                `│&nbsp;3rd&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;405_NotFound&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;TEAM-040&nbsp;│&nbsp;Decibel&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│`,
+                `│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;Badak&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;TEAM-005&nbsp;│&nbsp;Badak&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│`,
+                `│&nbsp;Honorable&nbsp;Mentions&nbsp;│&nbsp;Ninjas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;TEAM-011&nbsp;│&nbsp;Pizzy&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│`,
+                `│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;AntiSocialSocialClub&nbsp;│&nbsp;TEAM-029&nbsp;│&nbsp;reTax&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│`,
+                `│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;Code-X&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;TEAM-015&nbsp;│&nbsp;Code-X&nbsp;IDE&nbsp;&nbsp;&nbsp;│`,
+                `└────────────────────┴──────────────────────┴──────────┴──────────────┘`,
+            ]
+        }
+
         if (command === 'pages') {
             return Object.keys(pages)
         }
 
         if (command === 'register') {
+            return [
+                'Registrations for Mumbai Hackathon 2019 is closed.'
+            ]
             let questions = {
                 'Full Name?': 'fullname',
                 'Email?': 'email',

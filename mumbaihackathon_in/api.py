@@ -9,6 +9,7 @@ import re
 
 @frappe.whitelist(allow_guest=True)
 def register(fullname, email, organization, team_name=None, source="Form", registration_method=None):
+	return 'Registrations for Mumbai Hackathon 2019 is closed.'
 	year = frappe.utils.today()[:4]
 
 	regi = frappe.new_doc("Registration")
