@@ -7,7 +7,7 @@ def get_context(context):
             "github_url": "https://github.com/tanmaysankhe/CaeliScribo",
             "team_members": [
                 "Tanmay Sankhe",
-                "Mumbaikar007",
+                "Pranav Puranik",
             ]
         }],
         'first_runnerups': [{
