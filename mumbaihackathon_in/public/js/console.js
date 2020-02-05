@@ -157,7 +157,7 @@ const t = new EmuTerm(document.getElementById('terminal'), {
         if (command === 'help') {
             return [
                 'Available commands:',
-                `${t.chalk('winners', 'yellow', '150')} 2019 Winners.`,
+                `${t.chalk('pastwinners', 'yellow', '150')} 2019 Winners.`,
                 `${t.chalk('register', 'yellow', '150')} Register your team.`,
                 `${t.chalk('about', 'yellow', '150')} About Mumbai Hackathon.`,
                 `${t.chalk('pages', 'yellow', '150')} List of pages to navigate.`,
@@ -168,7 +168,7 @@ const t = new EmuTerm(document.getElementById('terminal'), {
         }
         if (command === 'about') {
             return [
-                '--------- Mumbai Hackathon 2019 (⌐■_■) ---------',
+                '--------- Mumbai Hackathon 2020 (⌐■_■) ---------',
                 `${t.chalk('16th and 17th March', 'yellow')}`,
                 `${t.chalk('Don Bosco Institute of Technology, Kurla', 'yellow')}`,
                 `${t.chalk('₹ 50,000 Cash Prize', 'yellow')}`,
@@ -218,7 +218,7 @@ const t = new EmuTerm(document.getElementById('terminal'), {
             ]
         }
 
-        if (command === 'winners') {
+        if (command === 'pastwinners') {
             return [
                 `┌────────────────────┬──────────────────────┬──────────┬──────────────┐`,
                 `│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rank&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Team&nbsp;Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;Team&nbsp;ID&nbsp;&nbsp;│&nbsp;Project&nbsp;Name&nbsp;│`,
@@ -240,9 +240,6 @@ const t = new EmuTerm(document.getElementById('terminal'), {
         }
 
         if (command === 'register') {
-            return [
-                'Registrations for Mumbai Hackathon 2019 is closed.'
-            ]
             let questions = {
                 'Full Name?': 'fullname',
                 'Email?': 'email',
@@ -312,7 +309,7 @@ const t = new EmuTerm(document.getElementById('terminal'), {
 function clear_console() {
     t.clear_console();
     t.write_console([
-        'Welcome to Mumbai Hackathon v4.0',
+        'Welcome to Mumbai Hackathon v5.0',
         'Type "help" for a list of available commands'
     ]);
 }

@@ -2,123 +2,121 @@
 <html lang="en">
 
 <head>
-    <!--
+	<!--
   ,-                                                                                  -.
  _|     |\/|       ._ _   |_    _.  o    |_|   _.   _  |    _.  _|_  |_    _   ._      |_
   |     |  |  |_|  | | |  |_)  (_|  |    | |  (_|  (_  |<  (_|   |_  | |  (_)  | |     |
   `-                                                                                  -'
 
-    -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	-->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<title>{% block title %} {{ title | striptags }} {% endblock %}</title>
 
 	<link rel="manifest" href="/manifest.json">
 
-    {% block meta %}{% endblock %}
+	{% block meta %}{% endblock %}
 
-    <!-- Meta tags for SEO and Social Media -->
-    <html itemscope itemtype="http://schema.org/Webpage">
+	<!-- Meta tags for SEO and Social Media -->
+	<html itemscope itemtype="http://schema.org/Webpage">
 
-    <!-- Schema.org markup for Google+ -->
-    <meta itemprop="name" content="Mumbai Hackathon - 2019">
-    <meta itemprop="description" content="Mumbai Hackathon is an Open Source Hackathon organized by the Frappe and DBIT, Mumbai.">
-    <meta itemprop="image" content="{{ frappe.utils.get_url() }}/hackathon-g+.png">
+	<!-- Schema.org markup for Google+ -->
+	<meta itemprop="name" content="Mumbai Hackathon - 2019">
+	<meta itemprop="description" content="Mumbai Hackathon is an Open Source Hackathon organized by the Frappe and DBIT, Mumbai.">
+	<meta itemprop="image" content="{{ frappe.utils.get_url() }}/hackathon-g+.png">
 
-    <!-- Twitter Card data -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@mumbaihackathon">
-    <meta name="twitter:title" content="Mumbai Hackathon - 2019">
-    <meta name="twitter:description" content="Mumbai Hackathon 2019.">
-    <meta name="twitter:creator" content="@mumbaihackathon">
+	<!-- Twitter Card data -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@mumbaihackathon">
+	<meta name="twitter:title" content="Mumbai Hackathon - 2019">
+	<meta name="twitter:description" content="Mumbai Hackathon 2019.">
+	<meta name="twitter:creator" content="@mumbaihackathon">
 
-    <!-- Twitter summary card with large image must be at least 280x150px -->
-    <meta name="twitter:image:src" content="{{ frappe.utils.get_url() }}/assets/mumbaihackathon_in/img/hackathon-twitter.png">
+	<!-- Twitter summary card with large image must be at least 280x150px -->
+	<meta name="twitter:image:src" content="{{ frappe.utils.get_url() }}/assets/mumbaihackathon_in/img/hackathon-twitter.png">
 
-    <!-- Open Graph data -->
-    <meta property="og:title" content="Mumbai Hackathon" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="{{ frappe.utils.get_url() }}" />
-    <meta property="og:image" content="{{ frappe.utils.get_url() }}/assets/mumbaihackathon_in/img/og-300.png" />
-    <meta property="og:image:width" content="300" />
-    <meta property="og:image:height" content="300" />
-    <meta property="og:description" content="Mumbai Hackathon is an annual Open Source Hackathon organized by the ERPNext Foundation and Don Bosco Institute of Technology, Mumbai." />
-    <meta property="og:site_name" content="Mumbai Hackathon - 2019" />
+	<!-- Open Graph data -->
+	<meta property="og:title" content="Mumbai Hackathon" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="{{ frappe.utils.get_url() }}" />
+	<meta property="og:image" content="{{ frappe.utils.get_url() }}/assets/mumbaihackathon_in/img/og-300.png" />
+	<meta property="og:image:width" content="300" />
+	<meta property="og:image:height" content="300" />
+	<meta property="og:description" content="Mumbai Hackathon is an annual Open Source Hackathon organized by the ERPNext Foundation and Don Bosco Institute of Technology, Mumbai." />
+	<meta property="og:site_name" content="Mumbai Hackathon - 2019" />
 
-    <!-- End of Meta Tags-->
-    <link rel="stylesheet" href="/assets/mumbaihackathon_in/css/build/hack.css">
-    <link rel="stylesheet" href="/assets/mumbaihackathon_in/css/console.css">
-    <link rel="canonical" href="{{ frappe.utils.get_url() }}" />
+	<!-- End of Meta Tags-->
+	<link rel="stylesheet" href="/assets/mumbaihackathon_in/css/build/hack.css">
+	<link rel="stylesheet" href="/assets/mumbaihackathon_in/css/console.css">
+	<link rel="canonical" href="{{ frappe.utils.get_url() }}" />
 
-    <!-- favicons-->
-    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="img/manifest.json">
-    <meta name="msapplication-TileColor" content="#000">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#000">
-    <link rel="shortcut icon" href="img/favicon.ico">
+	<!-- favicons-->
+	<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="img/manifest.json">
+	<meta name="msapplication-TileColor" content="#000">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#000">
+	<link rel="shortcut icon" href="img/favicon.ico">
 
-    <!-- End -->
-    <script>
-        window.frappe = {};
-        frappe.ready_events = [];
-        frappe.ready = function (fn) {
-            frappe.ready_events.push(fn);
-        }
-        window.dev_server = 1;
-    </script>
+	<!-- End -->
+	<script>
+		window.frappe = {};
+		frappe.ready_events = [];
+		frappe.ready = function(fn) {
+			frappe.ready_events.push(fn);
+		}
+		window.dev_server = {{ dev_server }};
+		window.socketio_port = {{ frappe.socketio_port }};
+	</script>
 </head>
 
 <body class="bg-black font-body">
-    <div class="container mx-auto px-4">
-        <div class="md:mx-24 mx-0">
-            {% block navbar %}
-                {% include "templates/navbar.html" %}
-            {% endblock %}
-            {% block body %}{% endblock %}
-            {% block footer %}
-                {% include "templates/footer.html" %}
-            {% endblock %}
-        </div>
-    </div>
-    </div>
-    {% block scripts %} {% endblock %}
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            window.register = (values) => {
-                return fetch('/api/method/mumbaihackathon_in.api.register', {
-                    method: 'POST',
-                    headers: {
-                        "Content-Type": "application/json",
-                        "Accept": "application/json"
-                    },
-                    body: JSON.stringify(values)
-                }).then(async (response) => {
-                    if (response.ok) {
-                        const r = await response.json();
-                        let message = r.message;
-                        return message;
-                    } else {
-                        console.log(response);
-                        return null;
-                    }
-                });
-            }
-        })
-    </script>
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+	<div class="container mx-auto px-4">
+		<div class="md:mx-24 mx-0">
+			{% block navbar %}
+				{% include "templates/navbar.html" %}
+			{% endblock %}
+			{% block body %}{% endblock %}
+			{% block footer %}
+				{% include "templates/footer.html" %}
+			{% endblock %}
+		</div>
+	</div>
+	</div>
+	{% block scripts %} {% endblock %}
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			window.register = (values) => {
+				return frappe.call('mumbaihackathon_in.api.register', {
+					...values
+				}).then((response) => {
+					console.log(response)
+					if (response.message) {
+						return response.message;
+					} else {
+						console.log(response);
+						return null;
+					}
+				});
+			}
+		})
+	</script>
+	<!-- csrf_token -->
+	<script type="text/javascript" src="/assets/frappe/js/lib/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="/assets/frappe/js/lib/socket.io.min.js"></script>
+	<script type="text/javascript" src="/assets/js/frappe-web.min.js"></script>
 </body>
 </html>
