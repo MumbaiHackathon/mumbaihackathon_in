@@ -240,6 +240,9 @@ const t = new EmuTerm(document.getElementById('terminal'), {
         }
 
         if (command === 'register') {
+            return [
+                "Mumbai Hackathon has been cancelled for the year 2020",
+            ]
             let questions = {
                 'Full Name?': 'fullname',
                 'Email?': 'email',
