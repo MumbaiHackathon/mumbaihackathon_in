@@ -9,8 +9,13 @@
 
 {% block body %}
             <div class="text-xl text-grey mt-8 text-center md:text-left">
-                Hack with us at the Don Bosco Institute of Technology on 14 and 15 of March, and win ₹75,000 cash prize!
+                Hack with us at the Don Bosco Institute of Technology on {{details.date}}, and win ₹75,000 cash prize!
             </div>
+            {% if details.disable_registration %}
+            <div class="mt-8 text-center text-xl">
+                <div class="text-grey" id="message">Registrations are closed.</div>
+            </div>
+            {% else %}
             <div class="mt-8 md:mt-16">
                 <form class="w-full max-w-sm mx-auto">
                     <div class="flex flex-wrap">
@@ -72,6 +77,7 @@
             <div class="mt-8 text-center">
                 <div class="text-grey" id="message">P.S. You are about to register the uncool way.</div>
             </div>
+            {% endif %}
     {% endblock %}
 
     {% block scripts %}
