@@ -101,7 +101,7 @@
 		document.addEventListener('DOMContentLoaded', () => {
 			window.register = (values) => {
 				return frappe.call('mumbaihackathon_in.api.register', {
-					...values
+					values
 				}).then((response) => {
 					console.log(response)
 					if (response.message) {
