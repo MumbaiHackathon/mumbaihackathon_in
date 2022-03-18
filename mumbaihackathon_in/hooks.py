@@ -3,11 +3,11 @@ from __future__ import unicode_literals
 
 app_name = "mumbaihackathon_in"
 app_title = "Mumbai Hackathon"
-app_publisher = "Neil Lasrado"
+app_publisher = "Frappe Technologies"
 app_description = "Website for Mumbai Hackathon"
 app_icon = "octicon octicon-file-directory"
 app_color = "grey"
-app_email = "neil@frappe.io"
+app_email = "team@frappe.io"
 app_version = "0.0.1"
 app_license = "MIT"
 
