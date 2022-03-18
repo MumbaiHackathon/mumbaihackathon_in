@@ -9,8 +9,7 @@ import re
 
 @frappe.whitelist(allow_guest=True)
 def register(fullname, email, organization, team_name=None, source="Form", registration_method=None):
-	return "Mumbai Hackathon has been cancelled for the year 2020"
-	year = frappe.utils.today()[:4]
+	year = frappe.db.get_single_value("Hackathon Settings", "year")
 
 	regi = frappe.new_doc("Registration")
 	regi.fullname = fullname

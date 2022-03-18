@@ -1,8 +1,8 @@
-# Copyright (c) 2022, Neil Lasrado and contributors
+# Copyright (c) 2022, Frappe Technologies and contributors
 # For license information, please see license.txt
 
 # import frappe
 from frappe.model.document import Document
 
-class HackathonSetting(Document):
+class HackathonSettings(Document):
 	pass

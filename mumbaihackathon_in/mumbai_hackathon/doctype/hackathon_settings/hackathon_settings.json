@@ -8,7 +8,8 @@
  "field_order": [
   "date",
   "year",
-  "disable_registration"
+  "disable_registration",
+  "cash_prize"
  ],
  "fields": [
   {
@@ -26,15 +27,20 @@
    "fieldname": "date",
    "fieldtype": "Data",
    "label": "Date"
+  },
+  {
+   "fieldname": "cash_prize",
+   "fieldtype": "Currency",
+   "label": "Cash Prize"
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2022-03-17 01:47:32.964361",
+ "modified": "2022-03-18 11:48:39.400306",
  "modified_by": "Administrator",
  "module": "Mumbai Hackathon",
- "name": "Hackathon Setting",
+ "name": "Hackathon Settings",
  "owner": "Administrator",
  "permissions": [
   {
