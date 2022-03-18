@@ -1,16 +1,16 @@
 {% extends "templates/hackathon.html" %}
 
-{% block title %}Mumbai Hackathon {{year}} - An Open-source Hackathon{% endblock %}
+{% block title %}Mumbai Hackathon {{details.year}} - An Open-source Hackathon{% endblock %}
 
 {% block meta %}
-    <meta name="description" content="Date: 14th and 15th March 2020. Place: Don Bosco Insitute of Technology, Kurla West. Mumbai Hackathon is an annual Open Source hackathon organized by FOSS United & Don Bosco Institue of Technology, Mumbai." />
-    <meta name="keywords" content="mumbai hackathon, hackathon in mumbai, opensource hackathon, open-source hackathon, open source hackathon, hackathon 2020, india hackathon, india hackathon 2020" />
+    <meta name="description" content="Date: {{details.date}}, {{details.year}}. Place: Don Bosco Insitute of Technology, Kurla West. Mumbai Hackathon is an annual Open Source hackathon organized by FOSS United & Don Bosco Institue of Technology, Mumbai." />
+    <meta name="keywords" content="mumbai hackathon, hackathon in mumbai, opensource hackathon, open-source hackathon, open source hackathon, hackathon {{details.year}}, india hackathon, india hackathon {{details.year}}" />
     <meta name="google-site-verification" content="CDEpw7jm-xyoo6dPfVmKnbTvx6VKI7Aa3RjECNRzqnk" />
 {% endblock %}
 
 {% block body %}
     <div class="text-xl text-grey mt-8 text-center md:text-left">
-        Hack with us at the <a class="text-white hover:text-yellow no-underline" href="https://goo.gl/maps/WmifWU2Wckx">Don Bosco Institute of Technology</a> on {{details.date}}, and win ₹75,000 cash prize!
+        Hack with us at the <a class="text-white hover:text-yellow no-underline" href="https://goo.gl/maps/WmifWU2Wckx">Don Bosco Institute of Technology</a> on {{details.date}} and win {{frappe.utils.fmt_money(details.cash_prize)}} cash prize!
     </div>
     <!-- <div class="text-xl text-grey mt-8 text-center">
         <span class="text-yellow">We're cancelling the {{details.year}} Mumbai Hackathon in the wake of new Corona virus (COVID-19) cases in Mumbai.</span>
