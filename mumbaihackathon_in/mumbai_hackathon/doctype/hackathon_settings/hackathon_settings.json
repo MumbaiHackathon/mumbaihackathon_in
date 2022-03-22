@@ -9,7 +9,8 @@
   "date",
   "year",
   "disable_registration",
-  "cash_prize"
+  "cash_prize",
+  "rules"
  ],
  "fields": [
   {
@@ -32,12 +33,17 @@
    "fieldname": "cash_prize",
    "fieldtype": "Currency",
    "label": "Cash Prize"
+  },
+  {
+   "fieldname": "rules",
+   "fieldtype": "Markdown Editor",
+   "label": "Rules"
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2022-03-18 11:48:39.400306",
+ "modified": "2022-03-22 12:40:41.730870",
  "modified_by": "Administrator",
  "module": "Mumbai Hackathon",
  "name": "Hackathon Settings",
