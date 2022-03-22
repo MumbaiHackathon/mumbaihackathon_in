@@ -72,3 +72,14 @@ input {
 .console-yellow {
 	color: #FEFF00
 }
+
+p[data-line-no="0"], p[data-line-no="1"] {
+	margin-bottom: 0;
+}
+p[data-line-no="1"] {
+	margin-top: 0;
+}
+
+p[data-line-no="2"] {
+	margin-top: 1rem;
+}
