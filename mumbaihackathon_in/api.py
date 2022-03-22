@@ -16,20 +16,33 @@ def register(values):
 	regi = frappe.new_doc("Registration")
 	regi.fullname = values['fullname']
 	regi.email = values['email']
-	regi.team_name = values['team_name']
 	regi.organization = values['organization']
-	regi.source = values['source']
-	regi.registration_method = values['registration_method']
-	regi.team_type = values['team_type']
 	regi.year = year
-	regi.fullname_2 = values['fullname_2']
-	regi.email_2 = values['email_2']
-	regi.fullname_3 = values['fullname_3']
-	regi.email_3 = values['email_3']
-	regi.fullname_4 = values['fullname_4']
-	regi.email_4 = values['email_4']
-	regi.fullname_5 = values['fullname_5']
-	regi.email_5 = values['email_5']
+
+	if 'team_name' in values:
+		regi.team_name = values['team_name']
+	if 'source' in values:
+		regi.source = values['source']
+	if 'registration_method' in values:
+		regi.registration_method = values['registration_method']
+	if 'team_type' in values:
+		regi.team_type = values['team_type'].capitalize()
+	if 'fullname_2' in values:
+		regi.fullname_2 = values['fullname_2']
+	if 'email_2' in values:
+		regi.email_2 = values['email_2']
+	if 'fullname_3' in values:
+		regi.fullname_3 = values['fullname_3']
+	if 'email_3' in values:
+		regi.email_3 = values['email_3']
+	if 'fullname_4' in values:
+		regi.fullname_4 = values['fullname_4']
+	if 'email_4' in values:
+		regi.email_4 = values['email_4']
+	if 'fullname_5' in values:
+		regi.fullname_5 = values['fullname_5']
+	if 'email_5' in values:
+		regi.email_5 = values['email_5']
 
 	try:
 		regi.save()
