@@ -9,9 +9,8 @@ import json
 
 
 @frappe.whitelist(allow_guest=True)
-def register(values):
-	values = json.loads(values)
-	year = frappe.utils.today()[:4]
+def register(fullname, email, organization, team_name=None, source="Form", registration_method=None):
+	year = frappe.db.get_single_value("Hackathon Settings", "year")
 	regi = frappe.new_doc("Registration")
 	regi.fullname = values['fullname']
 	regi.email = values['email']
