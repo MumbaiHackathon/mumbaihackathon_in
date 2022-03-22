@@ -11,50 +11,11 @@
             <div class="flex flex-wrap mt-8">
                 <div class="w-full text text-white leading-normal">
                         <h2 class="text-white text-2xl">Rules</h2>
-                        <h3 class="py-3">General</h3>
-                          <ul class="text-lg text-grey">
-                             <li>All code must be written during the event. <span class="text-yellow">You cannot use existing code</span> that you have written and finish it during the event.</li>
-                             <li>Participants <span class="text-yellow">cannot use any external APIs </span>as a part of their core functionality. (Using Google Maps API for an app that tracks a delivery is fine, but using Google Maps API to built a navigation app is not allowed)</li>
-                             <li>You can apply as an individual or a team. <span class="text-yellow">All team members must apply individually.</span> Teams can consist of up to a <span class="text-yellow">maximum of 5 members.</span></li>
-                             <li>The project must be developed in <span class="text-yellow">public repositories</span> on GitHub and should have a <span class="text-yellow">valid Open Source License.</span> You can read about open source licenses <a class="no-underline text-white hover:text-yellow" rel="noopener noreferrer" href="https://opensource.org/licenses">here</a></li>
-                             <li>All participants must bring their own laptops, <span class="text-yellow">no computers will be provided.</span></li>
-                             <li>The organizers reserve the right to make changes to the event program.</li>
-                             <li>The prize pool will be split among the winners.</li>
-                          </ul>
-                          <h3 class="py-3">Schedule</h3>
-                           <ul class="text-lg text-grey">
-                            <li>Be present at the venue on 14th March at 9 AM.</li>
-                            <li>Submit your idea at the registration desk.</li>
-                            <li>There will be two sessions for coding:
-                            <ul class="text-lg text-grey">
-                                <li>9 AM - 6 PM on 14th March.</li>
-                                <li>9 AM - 12 PM on 15th March.</li>
-                            </ul>
-                            <li>You CAN code between the two sessions when you're not at the venue.</li>
-                            <li>Your project is eligible for submission only if it's in working condition and has minimum quality standards.</li>
-                            <li><span class="text-yellow">Maximum 20 teams will qualify for presenting their work.</span></li>
-                            <li>You are supposed to push your code on GitHub by 12pm.</li>
-                            <li>Include a brief description of your project in the README and mention the installation steps along with screenshots. Projects submitted without a proper README will not be considered.</li>
-                            <li>Once your project is submitted, DO NOT make any changes. We will keep an eye on the commits made on GitHub.</li>
-                            <li>Presentations will begin at 2 PM.</li>
-                          </ul>
-                          <h3 class="py-3">Prerequisites</h3>
-                          <ul class="text-lg text-grey">
-                            <li>Download all the necessary files (IDE, SDK, etc) prior to the event.</li>
-                            <li>Internet connection will be provided, but it is best to have your own 3G/4G dongle.</li>
-                          </ul>
-                          <h3 class="py-3">Project</h3>
-                          <ul class="text-lg text-grey">
-                            <li>All code, design, art, music, SFX, and assets must be created during the duration of the Hackathon. You are however permitted to use any publicly available open source resources (images, datasets, etc.) in your project.</li>
-                            <li>Participants are free to make plans, create wireframes, and brainstorm prior to the event.</li>
-                            <li>All projects submitted for consideration for a prize will be subject to a full code and asset review in order to determine whether the work originated during the hackathon or not.</li>
-                            <li><span class="text-yellow">All projects must be uploaded to GitHub before 12PM on 15th March.</span></li>
-                            <li>If you’re new to Github, read this <a class="no-underline text-white hover:text-yellow" rel="noopener noreferrer" href="https://help.github.com/articles/create-a-repo/">guide.</a></li>
-                          </ul>
-                          <h3 class="py-3">Ownership</h3>
-                          <ul class="text-lg text-grey">
-                            <li>All teams retain full ownership of what they have created during the Hackathon.</li>
-                          <ul>
+                        <div class="py-3">
+                          {% if rules %}
+                          {{rules}}
+                          {% endif %}
+                        </div>
                 </div>
             </div>
 {% endblock %}
