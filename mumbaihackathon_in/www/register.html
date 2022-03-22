@@ -4,32 +4,49 @@
 
 {% block meta %}
 <meta name="description"
-    content="Date: 14th and 15th March 2020. Place: Don Bosco Insitute of Technology, Kurla West. Mumbai Hackathon is an annual Open Source hackathon organized by FOSS United & Don Bosco Institue of Technology, Mumbai." />
+    content="Date: {{details.date}} {{details.year}}. Place: Don Bosco Insitute of Technology, Kurla West. Mumbai Hackathon is an annual Open Source hackathon organized by FOSS United & Don Bosco Institue of Technology, Mumbai." />
 <meta name="keywords"
     content="mumbai hackathon, hackathon in mumbai, opensource hackathon, open-source hackathon, open source hackathon, hackathon 2020, india hackathon, india hackathon 2020" />
 {% endblock %}
 
 {% block body %}
 
-            <div class="text-xl text-grey mt-8 text-center md:text-left">
-                Hack with us at the Don Bosco Institute of Technology on {{details.date}}, and win ₹75,000 cash prize!
-            </div>
-            {% if details.disable_registration %}
-            <div class="mt-8 text-center text-xl">
-                <div class="text-grey" id="message">Registrations are closed.</div>
-            </div>
-            {% else %}
-            <div class="mt-8 md:mt-16">
-                <form class="w-full max-w-sm mx-auto">
-                    <div class="flex flex-wrap">
-                        <div class="w-full px-3 mb-6">
-                            <label>
-                                <span class="hidden">
-                                    Your Name
-                                </span>
-                                <input type="text" name="name" class="w-full bg-faded-black rounded py-3 px-5 text-grey outline-none hover:out" placeholder="Your Name">
-                            </label>
-                        </div>
+<div class="text-xl text-grey mt-8 text-center md:text-left">
+    Hack with us at the Don Bosco Institute of Technology on {{details.date}}, {{details.year}} and win
+    {{frappe.utils.fmt_money(details.cash_prize)}} cash
+    prize!
+</div>
+{% if details.disable_registration %}
+<div class="mt-8 text-center text-xl">
+    <div class="text-grey" id="message">Registrations are closed.</div>
+</div>
+{% else %}
+<div class="mt-8 md:mt-16">
+    <form class="w-full max-w-sm mx-auto">
+        <fieldset class="personal-details">
+            <div class="form-card">
+                <div class="flex flex-wrap">
+                    <div class="w-full px-3 mb-6">
+                        <label>
+                            <span class="hidden">
+                                Your Name
+                            </span>
+                            <input type="text" name="name"
+                                class="w-full bg-faded-black rounded py-3 px-5 text-grey outline-none hover:out"
+                                placeholder="Your Name">
+                        </label>
+                    </div>
+                </div>
+                <div class="flex flex-wrap">
+                    <div class="w-full px-3 mb-6">
+                        <label>
+                            <span class="hidden">
+                                Your Email
+                            </span>
+                            <input type="email" name="email"
+                                class="w-full bg-faded-black rounded py-3 px-5 text-grey outline-none hover:out"
+                                placeholder="Your Email">
+                        </label>
                     </div>
                 </div>
                 <div class="flex flex-wrap">
@@ -155,6 +172,7 @@
         <div class="text-grey" id="message">P.S. You are about to register the uncool way.</div>
     </div>
 </div>
+{% endif %}
 {% endblock %}
 
 {% block scripts %}
@@ -172,8 +190,8 @@
 
     function changePage(page) {
 
-        let current_fs = page =='next' ? $('.personal-details'): $('.team-details');
-        let next_fs = page =='next' ? $('.team-details') : $('.personal-details');
+        let current_fs = page == 'next' ? $('.personal-details') : $('.team-details');
+        let next_fs = page == 'next' ? $('.team-details') : $('.personal-details');
         current_fs.css({
             'display': 'none',
             'position': 'relative'
@@ -204,17 +222,17 @@
         var m_email4 = $('input[name="email4"]').val();
         var m_name5 = $('input[name="name5"]').val();
         var m_email5 = $('input[name="email5"]').val();
-    
+
         if (!fullname) {
             $('.message').html("Name is required");
             $('input[name="name"]').focus();
         }
-    
+
         else if (!email) {
             $('.message').html("Email is required");
             $('input[name="email"]').focus();
         }
-    
+
         else {
             $(".message").empty();
             const values = {
