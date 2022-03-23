@@ -298,7 +298,7 @@ const t = new EmuTerm(document.getElementById('terminal'), {
 							for (let i = 0; i <= (n * 2 - 1); i += 2) {
 								for (let j = i; j <= i + 1; j++) {
 									let question = Object.keys(team_details)[j];
-									const key = questions[question];
+									const key = team_details[question];
 									t.write_console(`${t.chalk(question, 'yellow')}`);
 									const value = await t.get_input();
 									if (value) {
