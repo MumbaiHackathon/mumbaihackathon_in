@@ -5,47 +5,16 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "fullname",
-  "email",
+  "members",
   "team_type",
-  "column_break_2",
   "organization",
   "registration_method",
   "year",
-  "column_break_8",
   "source",
   "team_details_section",
-  "team_name",
-  "team_members",
-  "team_member_2",
-  "fullname_2",
-  "email_2",
-  "team_member_3",
-  "fullname_3",
-  "email_3",
-  "column_break_22",
-  "team_member_4",
-  "fullname_4",
-  "email_4",
-  "team_member_5",
-  "fullname_5",
-  "email_5"
+  "team_name"
  ],
  "fields": [
-  {
-   "fieldname": "fullname",
-   "fieldtype": "Data",
-   "label": "Full Name",
-   "reqd": 1
-  },
-  {
-   "fieldname": "email",
-   "fieldtype": "Data",
-   "in_global_search": 1,
-   "in_list_view": 1,
-   "label": "Email",
-   "reqd": 1
-  },
   {
    "fieldname": "team_name",
    "fieldtype": "Data",
@@ -80,93 +49,20 @@
    "options": "Individual\nTeam"
   },
   {
-   "fieldname": "email_2",
-   "fieldtype": "Data",
-   "label": "Email"
-  },
-  {
-   "fieldname": "email_3",
-   "fieldtype": "Data",
-   "label": "Email"
-  },
-  {
-   "fieldname": "team_member_4",
-   "fieldtype": "Heading",
-   "label": "Team Member 4"
-  },
-  {
-   "fieldname": "email_4",
-   "fieldtype": "Data",
-   "label": "Email"
-  },
-  {
-   "fieldname": "team_member_5",
-   "fieldtype": "Heading",
-   "label": "Team Member 5"
-  },
-  {
-   "fieldname": "email_5",
-   "fieldtype": "Data",
-   "in_preview": 1,
-   "label": "Email"
-  },
-  {
-   "fieldname": "column_break_2",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "team_member_2",
-   "fieldtype": "Heading",
-   "label": "Team Member 2"
-  },
-  {
-   "fieldname": "team_member_3",
-   "fieldtype": "Heading",
-   "label": "Team Member 3"
-  },
-  {
    "depends_on": "eval:doc.team_type == 'Team'",
    "fieldname": "team_details_section",
    "fieldtype": "Section Break",
    "label": "Team Details"
   },
   {
-   "fieldname": "column_break_8",
-   "fieldtype": "Column Break"
-  },
-  {
-   "depends_on": "eval:doc.team_type == 'Team'",
-   "fieldname": "team_members",
-   "fieldtype": "Section Break",
-   "label": "Team Members"
-  },
-  {
-   "fieldname": "column_break_22",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "fullname_2",
-   "fieldtype": "Data",
-   "label": "Full Name"
-  },
-  {
-   "fieldname": "fullname_3",
-   "fieldtype": "Data",
-   "label": "Full Name"
-  },
-  {
-   "fieldname": "fullname_4",
-   "fieldtype": "Data",
-   "label": "Full Name"
-  },
-  {
-   "fieldname": "fullname_5",
-   "fieldtype": "Data",
-   "label": "Full Name"
+   "fieldname": "members",
+   "fieldtype": "Table",
+   "label": "Members",
+   "options": "Team Member"
   }
  ],
  "links": [],
- "modified": "2022-03-18 20:25:30.262581",
+ "modified": "2022-03-23 14:15:04.660049",
  "modified_by": "Administrator",
  "module": "Mumbai Hackathon",
  "name": "Registration",
@@ -197,6 +93,5 @@
   }
  ],
  "sort_field": "modified",
- "sort_order": "DESC",
- "title_field": "fullname"
+ "sort_order": "DESC"
 }
