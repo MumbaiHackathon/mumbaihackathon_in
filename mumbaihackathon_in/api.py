@@ -14,8 +14,8 @@ def register(values):
 
 	year = frappe.db.get_single_value("Hackathon Settings", "year")
 	regi = frappe.new_doc("Registration")
-	regi.fullname = values['fullname']
-	regi.email = values['email']
+	member1 = {'name1': values['fullname'], 'email': values['email']}
+	regi.append('members', member1)
 	regi.organization = values['organization']
 	regi.year = year
 
@@ -27,22 +27,14 @@ def register(values):
 		regi.registration_method = values['registration_method']
 	if 'team_type' in values:
 		regi.team_type = values['team_type'].capitalize()
-	if 'fullname_2' in values:
-		regi.fullname_2 = values['fullname_2']
-	if 'email_2' in values:
-		regi.email_2 = values['email_2']
-	if 'fullname_3' in values:
-		regi.fullname_3 = values['fullname_3']
-	if 'email_3' in values:
-		regi.email_3 = values['email_3']
-	if 'fullname_4' in values:
-		regi.fullname_4 = values['fullname_4']
-	if 'email_4' in values:
-		regi.email_4 = values['email_4']
-	if 'fullname_5' in values:
-		regi.fullname_5 = values['fullname_5']
-	if 'email_5' in values:
-		regi.email_5 = values['email_5']
+
+	for i in range(2,6):
+		f = 'fullname_'+ str(i)
+		e = 'email_'+ str(i)
+		if f in values and e in values:
+			m = {'name1': values[f], 'email': values[e]}
+			if m['name1'] or m['email']:
+				regi.append("members", m)
 
 	try:
 		regi.save()
