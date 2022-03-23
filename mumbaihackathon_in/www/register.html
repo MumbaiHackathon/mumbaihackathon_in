@@ -1,12 +1,12 @@
 {% extends "templates/hackathon.html" %}
 
-{% block title %}Mumbai Hackathon 2020 - An Opensource Hackathon{% endblock %}
+{% block title %}Mumbai Hackathon {{details.year}} - An Opensource Hackathon{% endblock %}
 
 {% block meta %}
 <meta name="description"
     content="Date: {{details.date}} {{details.year}}. Place: Don Bosco Insitute of Technology, Kurla West. Mumbai Hackathon is an annual Open Source hackathon organized by FOSS United & Don Bosco Institue of Technology, Mumbai." />
 <meta name="keywords"
-    content="mumbai hackathon, hackathon in mumbai, opensource hackathon, open-source hackathon, open source hackathon, hackathon 2020, india hackathon, india hackathon 2020" />
+    content="mumbai hackathon, hackathon in mumbai, opensource hackathon, open-source hackathon, open source hackathon, hackathon {{details.year}}, india hackathon, india hackathon {{details.year}}" />
 {% endblock %}
 
 {% block body %}

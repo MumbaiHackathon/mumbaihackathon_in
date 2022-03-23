@@ -1,10 +1,10 @@
 {% extends "templates/hackathon.html" %}
 
-{% block title %}About - Mumbai Hackathon 2020{% endblock %}
+{% block title %}About - Mumbai Hackathon {{details.year}}{% endblock %}
 
 {% block meta %}
-<meta name="description" content="About Mumbai Hackathon 2020. Registrater Now. Date: 14 and 15 March 2020. Place: Don Bosco Insitute of Technology, Kurla West." />
-<meta name="keywords" content="about mumbai hackathon, hackathon in mumbai, opensource hackathon, open-source hackathon, open source hackathon, hackathon 2020, india hackathon, india hackathon 2020, mumbai hackathon rules, rules mumbai hacakathon, hackathon in mumbai rules" />
+<meta name="description" content="About Mumbai Hackathon {{details.year}}. Registrater Now. Date: {{details.date}} {{details.year}}. Place: Don Bosco Insitute of Technology, Kurla West." />
+<meta name="keywords" content="about mumbai hackathon, hackathon in mumbai, opensource hackathon, open-source hackathon, open source hackathon, hackathon {{details.year}}, india hackathon, india hackathon {{details.year}}, mumbai hackathon rules, rules mumbai hacakathon, hackathon in mumbai rules" />
 {% endblock %}
 
 {% block body %}
@@ -17,16 +17,16 @@
         <p class="text-lg py-2">
             Here's the <a class="no-underline text-white hover:text-yellow" href="https://github.com/MumbaiHackathon">repositories</a> of the amazing projects built at Mumbai Hackathon.
         </p>
-        <h2 class="text-white text-xl">Details for Mumbai Hackathon 2020</h2>
+        <h2 class="text-white text-xl">Details for Mumbai Hackathon {{details.year}}</h2>
         <p class="text-lg py-2">
             <ul class="text-lg text-grey">
-                <li>Date: <span class="text-yellow">14 & 15 March 2020</span></li>
+                <li>Date: <span class="text-yellow">{{details.date}}</span></li>
                 <li>Timings:
                     <ul class="text-lg text-yellow">
                         <li>9 AM - 6 PM on 14 March.</li>
                         <li>9 AM - 12 PM on 15 March.</li>
                     </ul>
-                <li>Prize Amount: <span class="text-yellow">₹75,000</span></li>
+                <li>Prize Amount: <span class="text-yellow">{{frappe.utils.fmt_money(details.cash_prize)}}</span></li>
             </ul>
         </p>
     </div>
