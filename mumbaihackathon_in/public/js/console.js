@@ -295,8 +295,8 @@ const t = new EmuTerm(document.getElementById('terminal'), {
 								value = await t.get_input();
 							}
 							let n = value - 1;
-							for (let i = 0; i <= (n*2 - 1); i+=2) {
-								for (let j = i; j<= i+1; j++) {
+							for (let i = 0; i <= (n * 2 - 1); i += 2) {
+								for (let j = i; j <= i + 1; j++) {
 									let question = Object.keys(team_details)[j];
 									const key = questions[question];
 									t.write_console(`${t.chalk(question, 'yellow')}`);
@@ -354,6 +354,29 @@ function clear_console() {
 }
 
 clear_console();
+
+function animateClass(type) {
+	let elements = [];
+	for (let i = 0; i < 2; i++) {
+		elements.push(document.querySelector(`[data-line-no="${i}"]`))
+	}
+
+	if (type = "add") {
+		elements.map((e) => {
+			e.classList.add('typed')
+		})
+	}
+	else {
+		elements.map((e) => {
+			e.classList.remove('typed')
+		})
+	}
+}
+
+window.onload = function () {
+	animateClass('add');
+	setTimeout(animateClass('remove'), 10000)
+}
 
 // setTimeout(() => {
 //     t.command_input.value = 'h'
