@@ -14,6 +14,8 @@ def register(values):
 
 	year = frappe.db.get_single_value("Hackathon Settings", "year")
 	regi = frappe.new_doc("Registration")
+	regi.full_name = values['fullname']
+	regi.email = values['email']
 	member1 = {'name1': values['fullname'], 'email': values['email']}
 	regi.append('members', member1)
 	regi.organization = values['organization']
