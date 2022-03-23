@@ -168,10 +168,10 @@ const t = new EmuTerm(document.getElementById('terminal'), {
         }
         if (command === 'about') {
             return [
-                '--------- Mumbai Hackathon 2020 (⌐■_■) ---------',
-                `${t.chalk('14 and 15 March', 'yellow')}`,
+                '--------- Mumbai Hackathon 2022(⌐■_■) ---------',
+                `${t.chalk('9th and 10th April', 'yellow')}`,
                 `${t.chalk('Don Bosco Institute of Technology, Kurla', 'yellow')}`,
-                `${t.chalk('₹ 75,000 Cash Prize', 'yellow')}`,
+                `${t.chalk('₹ 1,00,000 Cash Prize', 'yellow')}`,
                 `Type the command ${t.chalk('register', 'blue')} to participate.`
             ]
         }
