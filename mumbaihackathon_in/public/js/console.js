@@ -247,6 +247,10 @@ const t = new EmuTerm(document.getElementById('terminal'), {
 				'How did you hear about us? (Optional)': 'source',
 				'Which best describes you? (Individual/Team)': 'team_type',
 				'Team Name? (Optional)': 'team_name',
+				'How many members are there in your team? (Including you, max.5)': 'team_num',
+			}
+
+			let team_details = {
 				'Team Member 2 (Name)': 'fullname_2',
 				'Team Member 2 (Email)': 'email_2',
 				'Team Member 3 (Name) (Optional)': 'fullname_3',
@@ -256,6 +260,7 @@ const t = new EmuTerm(document.getElementById('terminal'), {
 				'Team Member 5 (Name) (Optional)': 'fullname_5',
 				'Team Member 5 (Email) (Optional)': 'email_5',
 			}
+
 			return async () => {
 				let values = {
 					'registration_method': 'Console'
@@ -274,7 +279,7 @@ const t = new EmuTerm(document.getElementById('terminal'), {
 					const key = questions[question];
 
 					t.write_console(`${t.chalk(question, 'yellow')}`);
-					const value = await t.get_input();
+					let value = await t.get_input();
 					const required = !question.includes('Optional');
 					if (value) {
 						values[key] = value;
@@ -282,6 +287,27 @@ const t = new EmuTerm(document.getElementById('terminal'), {
 						if (question.includes('describes')) {
 							if (value.toLowerCase() !== 'team')
 								break;
+						}
+						if (question.includes('members')) {
+							if (value > 5) {
+								t.write_console('Invalid');
+								t.write_console(`${t.chalk(question, 'yellow')}`);
+								value = await t.get_input();
+							}
+							let n = value - 1;
+							for (let i = 0; i <= (n*2 - 1); i+=2) {
+								for (let j = i; j<= i+1; j++) {
+									let question = Object.keys(team_details)[j];
+									const key = questions[question];
+									t.write_console(`${t.chalk(question, 'yellow')}`);
+									const value = await t.get_input();
+									if (value) {
+										values[key] = value;
+										t.write_console(value);
+										index++;
+									}
+								}
+							}
 						}
 						index++;
 					} else if (!value && !required) {
