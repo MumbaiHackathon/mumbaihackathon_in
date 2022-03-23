@@ -63,23 +63,70 @@ input {
 .console-pink {
 	color: #D11919;
 }
+
 .console-blue {
 	color: #3AB7E9;
 }
+
 .console-green {
 	color: #329467;
 }
+
 .console-yellow {
 	color: #FEFF00
 }
 
-p[data-line-no="0"], p[data-line-no="1"] {
+p[data-line-no="0"],
+p[data-line-no="1"] {
 	margin-bottom: 0;
 }
+
 p[data-line-no="1"] {
 	margin-top: 0;
 }
 
 p[data-line-no="2"] {
 	margin-top: 1rem;
+}
+
+.typed {
+	overflow: hidden;
+	border-right: .15em solid #fff300;
+	white-space: nowrap;
+	width: 0;
+}
+
+@media (min-width: 576px) {
+	.typed {
+		animation:
+			typingD 4s forwards;
+	}
+}
+
+@media (max-width: 576px) {
+	.typed {
+		font-size: 0.35rem;
+		animation:
+			typingM 4s forwards;
+	}
+}
+
+@keyframes typingD {
+	from {
+		width: 0
+	}
+
+	to {
+		width: 68%
+	}
+}
+
+@keyframes typingM {
+	from {
+		width: 0
+	}
+
+	to {
+		width: 88%
+	}
 }
