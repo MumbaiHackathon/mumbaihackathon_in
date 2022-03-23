@@ -5,6 +5,8 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "full_name",
+  "email",
   "members",
   "team_type",
   "organization",
@@ -59,10 +61,20 @@
    "fieldtype": "Table",
    "label": "Members",
    "options": "Team Member"
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
   }
  ],
  "links": [],
- "modified": "2022-03-23 14:15:04.660049",
+ "modified": "2022-03-23 15:56:25.076952",
  "modified_by": "Administrator",
  "module": "Mumbai Hackathon",
  "name": "Registration",
@@ -93,5 +105,6 @@
   }
  ],
  "sort_field": "modified",
- "sort_order": "DESC"
+ "sort_order": "DESC",
+ "title_field": "full_name"
 }
