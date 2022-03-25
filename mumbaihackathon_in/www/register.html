@@ -13,8 +13,7 @@
 
 <div class="text-xl text-grey mt-8 text-center md:text-left">
     Hack with us at the Don Bosco Institute of Technology on {{details.date}}, {{details.year}} and win
-    {{frappe.utils.fmt_money(details.cash_prize)}} cash
-    prize!
+    {{details.cash_prize}} cash prize!
 </div>
 {% if details.disable_registration %}
 <div class="mt-8 text-center text-xl">
@@ -133,7 +132,7 @@
                             </span>
                             <input type="text" name="name{{i}}"
                                 class="w-full bg-faded-black rounded py-3 px-5 text-grey outline-none hover:out"
-                                placeholder="Your Team Name">
+                                placeholder="Name">
                         </label>
                     </div>
                     <div class="w-full md:w-1/2 px-3 mb-6">
@@ -143,7 +142,7 @@
                             </span>
                             <input type="email" name="email{{i}}"
                                 class="w-full bg-faded-black rounded py-3 px-5 text-grey outline-none hover:out"
-                                placeholder="Your Email Address">
+                                placeholder="Email">
                         </label>
                     </div>
                 </div>
