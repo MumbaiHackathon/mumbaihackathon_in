@@ -42,14 +42,14 @@
   },
   {
    "fieldname": "venue",
-   "fieldtype": "Data",
+   "fieldtype": "Text",
    "label": "Venue"
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2022-04-06 12:27:50.376424",
+ "modified": "2022-04-06 12:49:21.372207",
  "modified_by": "Administrator",
  "module": "Mumbai Hackathon",
  "name": "Hackathon Settings",
