@@ -1,6 +1,6 @@
 {
  "actions": [],
- "autoname": "format:TEAM-{year}-{###}",
+ "autoname": "format:TEAM-22-{###}",
  "creation": "2019-03-15 10:23:10.889481",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -26,8 +26,7 @@
    "fieldname": "team_name",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Team Name",
-   "reqd": 1
+   "label": "Team Name"
   },
   {
    "fieldname": "column_break_2",
@@ -38,8 +37,7 @@
    "fieldtype": "Link",
    "in_standard_filter": 1,
    "label": "Assigned Room",
-   "options": "Room",
-   "reqd": 1
+   "options": "Room"
   },
   {
    "fieldname": "section_break_4",
@@ -96,7 +94,7 @@
   }
  ],
  "links": [],
- "modified": "2022-04-08 19:09:33.994446",
+ "modified": "2022-04-08 20:37:48.970329",
  "modified_by": "Administrator",
  "module": "Mumbai Hackathon",
  "name": "Team",
