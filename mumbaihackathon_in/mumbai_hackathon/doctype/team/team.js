@@ -4,7 +4,7 @@
 frappe.ui.form.on('Team', {
 	setup: function(frm) {
 		frappe.model.get_value('Hackathon Settings', {'name': 'Hackathon Settings'}, 'year', (d) => {
-			frm.set_value('year', d.year)
+			frm.set_value('year', d.year);
 		})
 	},
 
@@ -13,7 +13,15 @@ frappe.ui.form.on('Team', {
 			room_name: frm.doc.assigned_room
 		}).then((data) => {
 			let message = "Capacity: " + data.message + " People"
-			frm.set_df_property('assigned_room', 'description', message)
+			frm.set_df_property('assigned_room', 'description', message);
 		})
 	},
 });
+
+frappe.ui.form.on('Team Participant', {
+	registration: function(frm, cdt, cdn) {
+		frappe.model.get_value('Hackathon Settings', {'name': 'Hackathon Settings'}, 'year', (d) => {
+			frappe.model.set_value(cdt, cdn, 'year', d.year);
+		})
+	}
+})

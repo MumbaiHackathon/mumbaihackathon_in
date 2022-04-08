@@ -14,7 +14,8 @@ def get_count(room_name):
 	room = frappe.get_doc("Room", room_name)
 	team_list = frappe.get_list("Team", filters={"assigned_room": room_name})
 	occupied = 0
+	year = frappe.db.get_single_value("Hackathon Settings", "year")
 	for team in team_list:
-		occupied += frappe.db.count("Team Participant", filters={"parent": team.name})
+		occupied += frappe.db.count("Team Participant", filters={"parent": team.name, "year": year })
 	print(room.capacity - occupied)
 	return room.capacity - occupied
