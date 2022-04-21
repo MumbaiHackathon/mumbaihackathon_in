@@ -23,7 +23,7 @@ def get_context(context):
             ]
         }],
         'second_runnerups': [{
-            "project_name": "Asthagraha",
+            "project_name": "Ashtagraha",
             "team_name": "Regal Spirit Devs",
             "project_descp": "Educational game for children to learn about planets",
             "github_url": "https://github.com/HiteshSharma-github/ashtagraha",
