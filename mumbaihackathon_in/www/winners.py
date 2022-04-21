@@ -1,60 +1,38 @@
 def get_context(context):
     context.winners = {
         'winners': [{
-            "project_name": "CaeliScribo",
-            "team_name": "The Futurist",
-            "project_descp": "Simulation of Air Writing Softwares for Smart Wearables.",
-            "github_url": "https://github.com/tanmaysankhe/CaeliScribo",
+            "project_name": "ScheduleX",
+            "team_name": "while:True",
+            "project_descp": "Genetic algorithm based timetable generator.",
+            "github_url": "https://github.com/AceAltair13/schedulex/",
             "team_members": [
-                "Tanmay Sankhe",
-                "Pranav Puranik",
+                "Tirth Shailesh Thoria",
+                "Rushil Sanjay Shah",
+                "Krupal Vinod Vora",
+                "Vivek Prafull Vadhiya",
+                "Akash Anil Dhuri"
             ]
         }],
         'first_runnerups': [{
-            "project_name": "LegoDoc",
-            "team_name": "Undefined",
-            "project_descp": "Open source platform for sharing legal document templates.",
-            "github_url": "https://github.com/chaitanyadukkipaty/LegoDoc",
+            "project_name": "Khansama.app",
+            "team_name": "Kaustubh",
+            "project_descp": "Recipes UI that keeps your sanity!",
+            "github_url": "https://github.com/nikochiko/khansama",
             "team_members": [
-                "Calden Rodrigues",
-                "Chaitanyakrishna Dukkipaty",
-                "Kyle Lobo",
-                "Roshan James",
-            ]
-        }, {
-            "project_name": "HandySnake",
-            "team_name": "Alspark",
-            "project_descp": "Handy Snake - A classic game with a new twist.",
-            "github_url": "https://github.com/teamAlspark/handysnake",
-            "team_members": [
-                "Anuj Singh",
-                "Sunny Patel",
-                "Akanksha Patro",
-                "Mahima Patel",
+                "Kaustubh Maske Patil"
             ]
         }],
         'second_runnerups': [{
-            "project_name": "Decibel",
-            "team_name": "405_NotFound",
-            "project_descp": "Real-time Noise level Measurement",
-            "github_url": "https://github.com/Mphis/Decibel",
+            "project_name": "Asthagraha",
+            "team_name": "Regal Spirit Devs",
+            "project_descp": "Educational game for children to learn about planets",
+            "github_url": "https://github.com/HiteshSharma-github/ashtagraha",
             "team_members": [
-                "Pranavi Choudhary",
-                "Shamilee Peruvaluthi",
-                "Ketki Davda",
-                "Bhavini Mamtora",
-                "Darshee Machhar",
-            ]
-        }, {
-            "project_name": "Badak",
-            "team_name": "Badak",
-            "project_descp": "A 2D game of destroying the obstacles.",
-            "github_url": "https://github.com/akki3737/badak",
-            "team_members": [
-                "Sarah Solkar",
-                "Pritesh Satpute",
-                "Akash Hadwale",
-                "Ankit Vishwakarma",
+                "Santo Sunny",
+                "Hitesh Sharma",
+                "Sahil Bane",
+                "Malaika Monterio",
+                "Naman Chouhan",
             ]
         }]
     }
